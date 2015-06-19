@@ -1,4 +1,5 @@
 ﻿VERSION_INIT   : U+1F340 : 🍀
+ESCAPE	       : U+1F340 : 🍀
 
         Comments
 
@@ -6,14 +7,20 @@ INLINE_COMMENT : U+1F4AC : 💬
 TBLOCK_COMMENT : U+1F53A : 🔺
 BBLOCK_COMMENT : U+1F4AC : 🔻
 
-INT_LITERAL  : something
-FLT_LITERAL  : something
-STR_LITERAL  : something
+INT_LITERAL  : [{U+0030,U+20E3-U+0039},U+20E3,U+1F51F,U+1F4AF]
+             :  0️⃣-9️⃣,🔟,💯
+
+FLT_LITERAL  : INT_LITERAL(i)INT_LITERAL
+
+STR_LITERAL  : Every character allowed except NEWLINE.
+               Use ESCAPE to write variables and NEWLINE
+
 IDENTIFIER   : something
  
         Operators
 
-EQUALS       : ==  : U+2B05                : ⬅️
+EQUALS       : =   : U+2B05                : ⬅️
+DOT          : .   : U+2139                : ℹ️
  
 RIGHT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪⬅️
 LEFT_ASSIGN  : <<= : U+23E9,U+2B05         : ⏩⬅️
@@ -40,7 +47,7 @@ GE_OP        : >=  : U+23EE         : ⏮
 EQ_OP        : ==  : U+2194         : ↔️
 NE_OP        : !=  : U+1F6AB,U+2194 : 🚫↔️
 
-TILDE        : ~   : U+2755         : ❕
+TILDE        : ~   : U+3030         : 〰
 NOT          : !   : U+1F6AB        : 🚫
 AND          : &   : U+274C         : ❌
 OR           : |   : U+2B55         : ⭕️
@@ -64,7 +71,6 @@ LPARENT      : U+2197  	     : ↗️
 RPARENT      : U+2196  	     : ↖️
 LBRACKET     : U+2198  	     : ↘️
 RBRACKET     : U+2199  	     : ↙️
-DOT          : U+2139  	     : ℹ️
 QUESTION     : U+2754  	     : ❔
 
         Keywords
@@ -72,9 +78,8 @@ QUESTION     : U+2754  	     : ❔
 IF       : U+2753  : ❓
 ELSE     : U+2757  : ❗️
 ELSEIF   : U+2049  : ⁉️
-FOR      : U+1F503 : 🔃
+LOOP     : U+1F503 : 🔃
 DO       : U+1F449 : 👉
-WHILE    : U+1F503 : 🔃
 SWITCH   : U+1F6A6 : 🚦
 CASE     : U+1F4A1 : 💡
 DEFAULT  : U+1F526 : 🔦
