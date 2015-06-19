@@ -1,4 +1,6 @@
-﻿VERSION_INIT   : U+1F340 : 🍀
+﻿WHITESPACE     :         :
+INDENT         : [^\s*]	 : 
+VERSION_INIT   : U+1F340 : 🍀
 ESCAPE	       : U+1F340 : 🍀
 
         Comments
@@ -7,10 +9,10 @@ INLINE_COMMENT : U+1F4AC : 💬
 TBLOCK_COMMENT : U+1F53A : 🔺
 BBLOCK_COMMENT : U+1F4AC : 🔻
 
-INT_LITERAL  : [{U+0030,U+20E3-U+0039},U+20E3,U+1F51F,U+1F4AF]
-             :  0️⃣-9️⃣,🔟,💯
-
-FLT_LITERAL  : INT_LITERAL(i)INT_LITERAL
+INT_LITERAL  : U+1F4AF : 💯
+INT_LITERAL  : U+1F51F : 🔟
+INT_LITERAL  : [1-9]{U+20E3}?([0-9]{U+20E3}?)*
+FLT_LITERAL  : ([0-9]{U+20E3}?)+{U+2139}([0-9]{U+20E3}?)+
 
 STR_LITERAL  : Every character allowed except NEWLINE.
                Use ESCAPE to write variables and NEWLINE
@@ -57,16 +59,14 @@ ADD          : +   : U+2795         : ➕
 MUL          : *   : U+2716         : ✖️
 DIV          : /   : U+2797         : ➗
 MOD          : %   : U+0023 U+20E3  : #️⃣
+POWER        : ^^  : U+1F53C        : 🔼
 LEFT         : <   : U+25C0         : ◀️
 RIGHT        : >   : U+25B6         : ▶️
        
         Other
-       
-NEWLINE	     : U+000A        :
-
-INDENT       : U+0020,U+0020 :  
+		
 COMMA        : U+1F4CC 	     : 📌
-COLON        : U+27A1  	     : ➡️
+COLON        : U+21A9        : ↩️
 LPARENT      : U+2197  	     : ↗️
 RPARENT      : U+2196  	     : ↖️
 LBRACKET     : U+2198  	     : ↘️
@@ -90,3 +90,7 @@ RETURN   : U+2934  : ⤴️
 STRUCT   : U+1F3E2 : 🏢
 TRUE     : U+1F44D : 👍
 FALSE    : U+1F44E : 👎
+
+TRY      : U+26A0  : ⚠️
+CATCH    : U+26D4  : ⛔️
+FINALLY  : U+1F3C1 : 🏁
