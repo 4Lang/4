@@ -13,7 +13,7 @@ IDENTIFIER   : something
  
         Operators
 
-EQUALS       : U+2B05  	     : ⬅️
+EQUALS       : ==  : U+2B05                : ⬅️
  
 RIGHT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪⬅️
 LEFT_ASSIGN  : <<= : U+23E9,U+2B05         : ⏩⬅️
