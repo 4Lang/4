@@ -6,60 +6,62 @@ IDENTIFIER   : something
  
         Operators
  
-RIGHT_ASSIGN : >>=
-LEFT_ASSIGN  : <<=
-ADD_ASSIGN   : +=
-SUB_ASSIGN   : -=
-MUL_ASSIGN   : *=
-DIV_ASSIGN   : /=
-MOD_ASSIGN   : %=
-AND_ASSIGN   : &=
-XOR_ASSIGN   : ^=
-OR_ASSIGN    : |=
-RIGHT_OP     : >>
-LEFT_OP      : <<
-INC_OP       : ++
-DEC_OP       : --
-PTR_OP       : ->
-AND_OP       : &&
-OR_OP        : ||
-LE_OP        : <=
-GE_OP        : >=
-EQ_OP        : ==
-NE_OP        : !=
-AND          : &
-NOT          : !
-TILDE        : ~
-SUB          : -
-ADD          : +
-MUL          : *
-DIV          : /
-MOD          : %
-LEFT         : <
-RIGHT        : >
-XOR          : ^
-OR           : |
+RIGHT_ASSIGN : >>= : 
+LEFT_ASSIGN  : <<= : 
+ADD_ASSIGN   : +=  : 
+SUB_ASSIGN   : -=  : 
+MUL_ASSIGN   : *=  : 
+DIV_ASSIGN   : /=  : 
+MOD_ASSIGN   : %=  : 
+AND_ASSIGN   : &=  : 
+XOR_ASSIGN   : ^=  : 
+OR_ASSIGN    : |=  : 
+
+RIGHT_OP     : >>  :
+LEFT_OP      : <<  :
+INC_OP       : ++  :
+DEC_OP       : --  :
+PTR_OP       : ->  :
+AND_OP       : &&  :
+OR_OP        : ||  :
+LE_OP        : <=  :
+GE_OP        : >=  :
+EQ_OP        : ==  :
+NE_OP        : !=  :
+
+AND          : &   : 
+NOT          : !   : 
+TILDE        : ~   : 
+SUB          : -   : 
+ADD          : +   : 
+MUL          : *   : 
+DIV          : /   : 
+MOD          : %   : 
+LEFT         : <   : 
+RIGHT        : >   : 
+XOR          : ^   : 
+OR           : |   : 
        
         Other
        
-SEMIC        : NEW LINE
-LBRACE       : TWO SPACES
-RBRACE       : MARKED FOR DELETION
-COMMA        : U+1F4CC : 📌
-COLON        : U+27A1  : ➡️
-EQUALS       : U+2B05  : ⬅️
-LPARENT      : U+2197  : ↗️
-RPARENT      : U+2196  : ↖️
-LBRACKET     : U+2198  : ↘️
-RBRACKET     : U+2199  : ↙️ : MARKED FOR DELETION
-DOT          : U+2139  : ℹ️
-QUESTION     : U+2754  : ❔
- 
+NEWLINE		 : U+000A  		 :
+
+INDENT       : U+0020,U+0020 :  
+COMMA        : U+1F4CC 		 : 📌
+COLON        : U+27A1  		 : ➡️
+EQUALS       : U+2B05  		 : ⬅️
+LPARENT      : U+2197  		 : ↗️
+RPARENT      : U+2196  	     : ↖️
+LBRACKET     : U+2198  		 : ↘️
+RBRACKET     : U+2199  		 : ↙️
+DOT          : U+2139  		 : ℹ️
+QUESTION     : U+2754  		 : ❔
+
         Keywords
        
 IF       : U+2753  : ❓
 ELSE     : U+2757  : ❗️
-ELSE IF  : U+2049  : ⁉️
+ELSEIF   : U+2049  : ⁉️
 FOR      : U+1F503 : 🔃
 DO       : U+1F449 : 👉
 WHILE    : U+1F503 : 🔃
