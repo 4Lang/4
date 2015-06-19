@@ -1,0 +1,79 @@
+﻿
+
+{ } indenting
+; newline
+,📌
+➡️:
+↗️(
+↖️)
+↘️[ ]
+❔?
+⭕️⭕️||
+❌❌&&
+⭕️|
+❌&
+⬆️^
+↔️==
+🚫↔️!=
+◀️↔️<=
+▶️↔️>=
+◀️<
+▶️>
+⏪<<
+⏩>>
+➕+
+➖-
+✖️*
+➗/
+#⃣%
+⏫++
+⏬--
+ℹ️.
+➡️->
+💬...
+⬅️=
+🚫!
+
+🔤 string 
+🔡 char 
+🔢 int
+🔢🔢 long
+💱 float
+💱💱 double
+✌️bool
+🚫void
+📅 date
+
+🔃for
+🔃while
+👉do
+
+⤴️return
+↪️ continue
+✋break
+🏃goto
+
+😐static
+🔒signed
+🔓unsigned
+🏢 struct
+🔣 enum
+
+🚦switch
+💡case
+🔦default
+
+❓if
+❗️else
+⁉️else if
+Literals
+
+bools
+👍true
+👎false
+
+ints
+0⃣ through 🔟 and 💯
+
+floats
+6⃣➗💯 .06
