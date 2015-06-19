@@ -1,6 +1,5 @@
 ﻿WHITESPACE     :         :
 INDENT         : ^\s*    : 
-VERSION_INIT   : U+1F340 : 🍀
 ESCAPE	       : U+1F340 : 🍀
 
         Comments
@@ -14,7 +13,7 @@ INT_LITERAL  : U+1F51F : 🔟
 INT_LITERAL  : [1-9]{U+20E3}?([0-9]{U+20E3}?)*
 FLT_LITERAL  : ([0-9]{U+20E3}?)+{U+2139}([0-9]{U+20E3}?)+
 
-STR_LITERAL  : '', and ESCAPE to escape
+STR_LITERAL  : "", and ESCAPE to escape
 
 IDENTIFIER   : something
  
