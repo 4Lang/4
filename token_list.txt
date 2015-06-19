@@ -49,15 +49,15 @@ RIGHT        : >   : U+25B6         : ▶️
 NEWLINE	     : U+000A        :
 
 INDENT       : U+0020,U+0020 :  
-COMMA        : U+1F4CC 		 : 📌
-COLON        : U+27A1  		 : ➡️
-EQUALS       : U+2B05  		 : ⬅️
+COMMA        : U+1F4CC 	     : 📌
+COLON        : U+27A1  	     : ➡️
+EQUALS       : U+2B05  	     : ⬅️
 LPARENT      : U+2197  	     : ↗️
 RPARENT      : U+2196  	     : ↖️
-LBRACKET     : U+2198  		 : ↘️
-RBRACKET     : U+2199  		 : ↙️
-DOT          : U+2139  		 : ℹ️
-QUESTION     : U+2754  		 : ❔
+LBRACKET     : U+2198  	     : ↘️
+RBRACKET     : U+2199  	     : ↙️
+DOT          : U+2139  	     : ℹ️
+QUESTION     : U+2754  	     : ❔
 
         Keywords
        
