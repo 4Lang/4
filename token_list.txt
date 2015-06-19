@@ -5,8 +5,8 @@ ANY_EMOJI = any unicode character listed in
 
         Regex
 
-WHITESPACE     : [^{ANY_EMOJI}]+
 INDENT         : ^\s*
+WHITESPACE     : \s+
 INLINE_COMMENT : {U+1F4AD - 💬}.*\n
 BLOCK_COMMENT  : {U+1F53A - 🔺}(.|\n)*{U+1F53B - 🔻}
 INT_LITERAL    : [1-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?([0-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?)*
