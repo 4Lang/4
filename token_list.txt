@@ -25,7 +25,7 @@ INC_OP       : ++  : U+23EB         : ⏫
 DEC_OP       : --  : U+23EC         : ⏬
 PTR_OP       : ->  : U+27A1         : ➡️
 AND_OP       : &&  : U+274C,U+274C  : ❌❌
-OR_OP        : ||  : U+2B55,U+2B55  : ⭕️
+OR_OP        : ||  : U+2B55,U+2B55  : ⭕️⭕️
 LE_OP        : <=  : U+23EA         : ⏪
 GE_OP        : >=  : U+23E9         : ⏩
 EQ_OP        : ==  : U+2194         : ↔️
