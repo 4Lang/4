@@ -11,8 +11,8 @@ IDENTIFIER   : something
  
         Operators
  
-RIGHT_ASSIGN : >>= : U+23ED,U+2B05         : ⏭⬅️
-LEFT_ASSIGN  : <<= : U+23EE,U+2B05         : ⏮⬅️
+RIGHT_ASSIGN : >>= : U+23ED,U+2B05         : ⏪⬅️
+LEFT_ASSIGN  : <<= : U+23EE,U+2B05         : ⏩⬅️
 AND_ASSIGN   : &=  : U+274C,U+2B05         : ❌⬅️
 OR_ASSIGN    : |=  : U+2B55,U+2B05         : ⭕️⬅️
 XOR_ASSIGN   : ^=  : U+2B06,U+2B05         : ⬆️⬅️
