@@ -1,6 +1,5 @@
 ﻿WHITESPACE     :         :
 INDENT         : ^\s*    : 
-ESCAPE	       : U+1F340 : 🍀
 
         Comments
 
