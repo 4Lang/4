@@ -1,79 +1,75 @@
-﻿
-
-{ } indenting
-; newline
-,📌
-➡️:
-↗️(
-↖️)
-↘️[ ]
-❔?
-⭕️⭕️||
-❌❌&&
-⭕️|
-❌&
-⬆️^
-↔️==
-🚫↔️!=
-◀️↔️<=
-▶️↔️>=
-◀️<
-▶️>
-⏪<<
-⏩>>
-➕+
-➖-
-✖️*
-➗/
-#⃣%
-⏫++
-⏬--
-ℹ️.
-➡️->
-💬...
-⬅️=
-🚫!
-
-🔤 string 
-🔡 char 
-🔢 int
-🔢🔢 long
-💱 float
-💱💱 double
-✌️bool
-🚫void
-📅 date
-
-🔃for
-🔃while
-👉do
-
-⤴️return
-↪️ continue
-✋break
-🏃goto
-
-😐static
-🔒signed
-🔓unsigned
-🏢 struct
-🔣 enum
-
-🚦switch
-💡case
-🔦default
-
-❓if
-❗️else
-⁉️else if
-Literals
-
-bools
-👍true
-👎false
-
-ints
-0⃣ through 🔟 and 💯
-
-floats
-6⃣➗💯 .06
+﻿WHITESPACE   : anything not an emoji?
+INT_LITERAL  : something
+FLT_LITERAL  : something
+STR_LITERAL  : something
+IDENTIFIER   : something
+ 
+        Operators
+ 
+RIGHT_ASSIGN : >>=
+LEFT_ASSIGN  : <<=
+ADD_ASSIGN   : +=
+SUB_ASSIGN   : -=
+MUL_ASSIGN   : *=
+DIV_ASSIGN   : /=
+MOD_ASSIGN   : %=
+AND_ASSIGN   : &=
+XOR_ASSIGN   : ^=
+OR_ASSIGN    : |=
+RIGHT_OP     : >>
+LEFT_OP      : <<
+INC_OP       : ++
+DEC_OP       : --
+PTR_OP       : ->
+AND_OP       : &&
+OR_OP        : ||
+LE_OP        : <=
+GE_OP        : >=
+EQ_OP        : ==
+NE_OP        : !=
+AND          : &
+NOT          : !
+TILDE        : ~
+SUB          : -
+ADD          : +
+MUL          : *
+DIV          : /
+MOD          : %
+LEFT         : <
+RIGHT        : >
+XOR          : ^
+OR           : |
+       
+        Other
+       
+SEMIC        : ;
+LBRACE       : {
+RBRACE       : }
+COMMA        : ,
+COLON        : :
+EQUALS       : =
+LPARENT      : (
+RPARENT      : )
+LBRACKET     : [
+RBRACKET     : ]
+DOT          : .
+QUESTION     : ?
+ 
+        Keywords
+       
+IF       : U+2753  : ❓
+ELSE     : U+2757  : ❗️
+ELSE IF  : U+2049  : ⁉️
+FOR      : U+1F503 : 🔃
+DO       : U+1F449 : 👉
+WHILE    : U+1F503 : 🔃
+SWITCH   : U+1F6A6 : 🚦
+CASE     : U+1F4A1 : 💡
+DEFAULT  : U+1F526 : 🔦
+BREAK    : U+270B  : ✋
+CONTINUE : U+21AA  : ↪️
+GOTO     : U+1F3C3 : 🏃
+RETURN   : U+2934  : ⤴️
+STRUCT   : U+1F3E2 : 🏢
+TRUE     : U+1F44D : 👍
+FALSE    : U+1F44E : 👎
