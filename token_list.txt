@@ -1,5 +1,7 @@
 ﻿VERSION_INIT   : U+1F340 : 🍀
 
+        Comments
+
 INLINE_COMMENT : U+1F4AC : 💬
 TBLOCK_COMMENT : U+1F53A : 🔺
 BBLOCK_COMMENT : U+1F4AC : 🔻
@@ -10,9 +12,11 @@ STR_LITERAL  : something
 IDENTIFIER   : something
  
         Operators
+
+EQUALS       : U+2B05  	     : ⬅️
  
-RIGHT_ASSIGN : >>= : U+23ED,U+2B05         : ⏪⬅️
-LEFT_ASSIGN  : <<= : U+23EE,U+2B05         : ⏩⬅️
+RIGHT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪⬅️
+LEFT_ASSIGN  : <<= : U+23E9,U+2B05         : ⏩⬅️
 AND_ASSIGN   : &=  : U+274C,U+2B05         : ❌⬅️
 OR_ASSIGN    : |=  : U+2B55,U+2B05         : ⭕️⬅️
 XOR_ASSIGN   : ^=  : U+2B06,U+2B05         : ⬆️⬅️
@@ -56,7 +60,6 @@ NEWLINE	     : U+000A        :
 INDENT       : U+0020,U+0020 :  
 COMMA        : U+1F4CC 	     : 📌
 COLON        : U+27A1  	     : ➡️
-EQUALS       : U+2B05  	     : ⬅️
 LPARENT      : U+2197  	     : ↗️
 RPARENT      : U+2196  	     : ↖️
 LBRACKET     : U+2198  	     : ↘️
