@@ -1,26 +1,25 @@
-﻿WHITESPACE     :         :
-INDENT         : ^\s*    : 
+﻿        Metacharacters
 
-        Comments
+ANY_EMOJI = any unicode character listed in
+            http://unicode.org/Public/emoji/latest/emoji-data.txt
 
-INLINE_COMMENT : U+1F4AC : 💬
-TBLOCK_COMMENT : U+1F53A : 🔺
-BBLOCK_COMMENT : U+1F53B : 🔻
+        Regex
 
-INT_LITERAL  : U+1F4AF : 💯
-INT_LITERAL  : U+1F51F : 🔟
-INT_LITERAL  : [1-9]{U+20E3}?([0-9]{U+20E3}?)*
-FLT_LITERAL  : ([0-9]{U+20E3}?)+{U+2139}([0-9]{U+20E3}?)+
+WHITESPACE     : [^ANY_EMOJI]+
+INDENT         : ^\s*
+INLINE_COMMENT : {U+1F4AC - 💬}.*\n
+BLOCK_COMMENT  : {U+1F53A - 🔺}[.\n]*{U+1F4AC - 🔻}
+INT_LITERAL    : {U+1F4AF - 💯} 
+INT_LITERAL    : {U+1F51F - 🔟}
+INT_LITERAL    : [1-9]{U+20E3}?([0-9]{U+20E3}?)*
+FLT_LITERAL    : ([0-9]{U+20E3}?)+{U+2139}([0-9]{U+20E3}?)+
+STR_LITERAL    : Use ""
+IDENTIFIER     : ({ANY_EMOJI}|[a-zA-Z_])({ANY_EMOJI}|[a-zA-Z_0-9])*
 
-STR_LITERAL  : "", and ESCAPE to escape
-
-IDENTIFIER   : something
- 
         Operators
 
 EQUALS       : =   : U+2B05                : ⬅️
 DOT          : .   : U+2139                : ℹ️
- 
 RIGHT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪⬅️
 LEFT_ASSIGN  : <<= : U+23E9,U+2B05         : ⏩⬅️
 AND_ASSIGN   : &=  : U+274C,U+2B05         : ❌⬅️
@@ -30,10 +29,9 @@ SUB_ASSIGN   : -=  : U+2796,U+2B05         : ➖⬅️
 ADD_ASSIGN   : +=  : U+2795,U+2B05         : ➕⬅️
 MUL_ASSIGN   : *=  : U+2716,U+2B05         : ✖️⬅️
 DIV_ASSIGN   : /=  : U+2797,U+2B05         : ➗⬅️
-MOD_ASSIGN   : %=  : U+0023 U+20E3,U+2B05  : #️⃣⬅️
+MOD_ASSIGN   : %=  : U+0023,U+20E3,U+2B05  : #️⃣⬅️
 LEFT_ASSIGN  : <=  : U+2B05,U+2B05         : ◀️⬅️
 RIGHT_ASSIGN : >=  : U+27A1,U+2B05         : ▶️⬅️
-
 RIGHT_OP     : >>  : U+23EA         : ⏪
 LEFT_OP      : <<  : U+23E9         : ⏩
 INC_OP       : ++  : U+23EB         : ⏫
@@ -45,7 +43,6 @@ LE_OP        : <=  : U+23ED         : ⏭
 GE_OP        : >=  : U+23EE         : ⏮
 EQ_OP        : ==  : U+2194         : ↔️
 NE_OP        : !=  : U+1F6AB,U+2194 : 🚫↔️
-
 TILDE        : ~   : U+3030         : 〰
 NOT          : !   : U+1F6AB        : 🚫
 AND          : &   : U+274C         : ❌
@@ -59,19 +56,19 @@ MOD          : %   : U+0023 U+20E3  : #️⃣
 POWER        : ^^  : U+1F53C        : 🔼
 LEFT         : <   : U+25C0         : ◀️
 RIGHT        : >   : U+25B6         : ▶️
-       
+
         Other
-		
-COMMA        : U+1F4CC 	     : 📌
-COLON        : U+21A9        : ↩️
-LPARENT      : U+2197  	     : ↗️
-RPARENT      : U+2196  	     : ↖️
-LBRACKET     : U+2198  	     : ↘️
-RBRACKET     : U+2199  	     : ↙️
-QUESTION     : U+2754  	     : ❔
+
+COMMA        : U+1F4CC      : 📌
+COLON        : U+21A9       : ↩️
+LPARENT      : U+2197       : ↗️
+RPARENT      : U+2196       : ↖️
+LBRACKET     : U+2198       : ↘️
+RBRACKET     : U+2199       : ↙️
+QUESTION     : U+2754       : ❔
 
         Keywords
-       
+
 IF       : U+2753  : ❓
 ELSE     : U+2757  : ❗️
 ELSEIF   : U+2049  : ⁉️
@@ -87,7 +84,6 @@ RETURN   : U+2934  : ⤴️
 STRUCT   : U+1F3E2 : 🏢
 TRUE     : U+1F44D : 👍
 FALSE    : U+1F44E : 👎
-
 TRY      : U+26A0  : ⚠️
 CATCH    : U+26D4  : ⛔️
 FINALLY  : U+1F3C1 : 🏁
