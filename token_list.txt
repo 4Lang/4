@@ -42,18 +42,18 @@ OR           : |
        
         Other
        
-SEMIC        : ;
-LBRACE       : {
-RBRACE       : }
-COMMA        : ,
-COLON        : :
-EQUALS       : =
-LPARENT      : (
-RPARENT      : )
-LBRACKET     : [
-RBRACKET     : ]
-DOT          : .
-QUESTION     : ?
+SEMIC        : NEW LINE
+LBRACE       : TWO SPACES
+RBRACE       : MARKED FOR DELETION
+COMMA        : U+1F4CC : 📌
+COLON        : U+27A1  : ➡️
+EQUALS       : U+2B05  : ⬅️
+LPARENT      : U+2197  : ↗️
+RPARENT      : U+2196  : ↖️
+LBRACKET     : U+2198  : ↘️
+RBRACKET     : U+2199  : ↙️ : MARKED FOR DELETION
+DOT          : U+2139  : ℹ️
+QUESTION     : U+2754  : ❔
  
         Keywords
        
