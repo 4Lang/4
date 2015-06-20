@@ -18,7 +18,7 @@ IDENTIFIER     : ({ANY_EMOJI}|[a-zA-Z_])({ANY_EMOJI}|[a-zA-Z_0-9])*
 
 EQUALS       : =   : U+2B05                : ⬅️
 DOT          : .   : U+2139                : ℹ️
-RIGHT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪⬅️
+RIGHT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪️⬅️
 LEFT_ASSIGN  : <<= : U+23E9,U+2B05         : ⏩⬅️
 AND_ASSIGN   : &=  : U+274C,U+2B05         : ❌⬅️
 OR_ASSIGN    : |=  : U+2B55,U+2B05         : ⭕️⬅️
@@ -28,7 +28,7 @@ ADD_ASSIGN   : +=  : U+2795,U+2B05         : ➕⬅️
 MUL_ASSIGN   : *=  : U+2716,U+2B05         : ✖️⬅️
 DIV_ASSIGN   : /=  : U+2797,U+2B05         : ➗⬅️
 MOD_ASSIGN   : %=  : U+0023,U+20E3,U+2B05  : #️⃣⬅️
-POW_ASSIGN   : ^^= : U+1F53C,U+20E3        : 🔼⬅
+POW_ASSIGN   : ^^= : U+1F53C,U+20E3        : 🔼⬅️
 
 LE_OP        : <=  : U+2B05,U+2B05         : ◀️↔️
 GE_OP        : >=  : U+27A1,U+2B05         : ▶️↔️
