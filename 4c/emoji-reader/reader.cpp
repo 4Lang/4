@@ -10,7 +10,13 @@ using namespace std;
 
 static std::unordered_set<string> emojis;
 
+
+
 int main () {
+  ofstream output;
+  output.open ("emoji.hpp");
+
+	
   string line;
   ifstream myfile ("emoji-data.txt");
   if (myfile.is_open())
@@ -20,7 +26,7 @@ int main () {
 	  if (line.at(0)=='#')
 		  continue;
 	  
-	  line = line.substr(0, line.find(";", 1) + ",");
+	  line = line.substr(0, line.find(";", 1)) + ",";
 	  
 	  int spaces = 0;
 	  for(char& c : line) {
@@ -33,11 +39,17 @@ int main () {
 	  
 	  line.insert(0, "0x");
 	  
-	  emojis.insert(line);
+	  output << line;
 	  
       cout << line << '\n';
     }
     myfile.close();
+	
+	//output << " ); return emojis.count(c);"
+	//output << " } ";
+	//output << "\n #endif";
+	
+	output.close();
 	
   }
 
