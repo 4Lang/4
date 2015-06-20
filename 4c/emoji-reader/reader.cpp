@@ -4,6 +4,8 @@
 
 #include <unordered_set>
 
+// http://pastebin.com/ugAQjABX
+
 using namespace std;
 
 static std::unordered_set<string> emojis;
@@ -18,7 +20,7 @@ int main () {
 	  if (line.at(0)=='#')
 		  continue;
 	  
-	  line = line.substr(0, line.find(";", 1));
+	  line = line.substr(0, line.find(";", 1) + ",");
 	  
 	  int spaces = 0;
 	  for(char& c : line) {
