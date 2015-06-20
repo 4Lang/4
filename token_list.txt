@@ -59,8 +59,8 @@ RIGHT        : >   : U+25B6                : ▶️
 
 COMMA        : U+1F4CC      : 📌
 COLON        : U+21A9       : ↩️
-LPARENT      : U+2197       : ↗️
-RPARENT      : U+2196       : ↖️
+LPARENT      : U+1F31C      : 🌜
+RPARENT      : U+1F31B      : 🌛
 LBRACKET     : U+2198       : ↘️
 RBRACKET     : U+2199       : ↙️
 QUESTION     : U+2754       : ❔
