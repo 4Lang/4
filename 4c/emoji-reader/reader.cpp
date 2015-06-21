@@ -45,9 +45,9 @@ int main () {
     }
     myfile.close();
 	
-	//output << " ); return emojis.count(c);"
-	//output << " } ";
-	//output << "\n #endif";
+	output << "\n ); return emojis.count(c);";
+	output << "\n } ";
+	output << "\n #endif";
 	
 	output.close();
 	
