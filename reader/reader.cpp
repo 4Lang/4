@@ -29,10 +29,10 @@ int main () {
 	  if (line.at(0)=='#')
 		  continue;
 	  
-	  line = line.substr(0, line.find(";", 1)) + ",";
+	  string symbol = line.substr(0, line.find(";", 1)) + ",";
 	  
 	  int spaces = 0;
-	  for(char& c : line) {
+	  for(char& c : symbol) {
 	    if (c == ' ')
 			spaces++;
       }
@@ -40,7 +40,11 @@ int main () {
 	  if (spaces >= 2)
 		  continue;
 	  
-	  line.insert(0, "0x");
+	  symbol.insert(0, "0x");
+	  
+	  string comment = " //" + line.substr(line.find("#"));
+	  
+	  line = symbol + comment;
 	  
 	  output << "\t";
 	  output << "\t";
@@ -51,11 +55,11 @@ int main () {
     }
     myfile.close();
 	
-	output << " \n \t"; output << " };";
-	output << " \n \n";
+	output << "\n\t"; output << "};";
+	output << "\n\n";
 	output << "\t"; output << "return emojis.count(c);";
-	output << " \n } ";
-	output << " \n #endif";
+	output << "\n}\n";
+	output << "\n#endif";
 	
 	output.close();
 	
