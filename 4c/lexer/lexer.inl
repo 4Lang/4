@@ -1,17 +1,16 @@
-template <class CharT>
-Lexer<CharT>::Lexer(std::basic_istream<CharT> &stream) {
-	file.assign(
-		std::istreambuf_iterator<CharT>(stream),
-		std::istreambuf_iterator<CharT>()
-	);
-}
+#include "emoji.hpp"
+#include <cctype>
 
-template <class CharT> bool  Lexer<CharT>::isEOF() const {
-	return file.cbegin() + pos.position == file.cend();
+template <class CharT> 
+Lexer<CharT>::Lexer(const FileBuffer<CharT> &file)
+: file(file) {}
+
+template <class CharT> bool Lexer<CharT>::isEOF() const {
+	return file.begin() + pos.position == file.end();
 }
 
 template <class CharT> CharT Lexer<CharT>::peek() const {
-	return *(file.cbegin() + pos.position);
+	return *(file.begin() + pos.position);
 }
 
 template <class CharT> CharT Lexer<CharT>::pop() {
@@ -50,8 +49,8 @@ Symbol Lexer<CharT>::next() {
 		symbol.end = pos;
 		return symbol;
 	} else if (peek() == 0x1F4AD) {
-		while (!isEOF() && peek() != 0x1F4AD) pop();
-		if (isEOF()) {
+		while (!isEOF() && peek() != 0x1F4AD && peek() != newline) pop();
+		if (isEOF() || peek() == newline) {
 			// TODO report error
 		}
 		symbol.token = Token::STR_LITERAL;
@@ -163,8 +162,23 @@ Symbol Lexer<CharT>::next() {
 		return symbol;
 	}
 	
-	// TODO test if peek() is a valid identifier character
-	while (!isEOF() && peek() != newline && !std::isspace(peek())) pop();
+	if (isReservedEmoji(peek())) {
+		// TODO report error;
+		pop();
+		return next();
+	}
+	
+	if (!std::isalpha(peek()) && !isEmoji(peek())) {
+		// TODO report error;
+		pop();
+		return next();
+	}
+	
+	while (!isEOF() && !isReservedEmoji(peek())) {
+		if (!std::isalnum(peek()) && !isEmoji(peek())) break;
+		pop();
+	}
+	
 	symbol.token = Token::IDENTIFIER;
 	symbol.end = pos;
 	return symbol;

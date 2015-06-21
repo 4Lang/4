@@ -2,10 +2,8 @@
 #define _LEXER_HPP_
 
 #include "tokens.hpp"
+#include "../file/FileBuffer.hpp"
 #include <cstddef>
-#include <istream>
-#include <string>
-#include <vector>
 
 struct Position {
 	std::size_t line     = 1;
@@ -21,17 +19,17 @@ struct Symbol {
 template <class CharT> class Lexer {
 public:
 	
-	Lexer(std::basic_istream<CharT> &stream);
+	Lexer(const FileBuffer<CharT> &file);
 	Symbol next();
+	bool isEOF() const;
 	
 private:
 	
+	const FileBuffer<CharT> &file;
 	Position pos;
-	std::vector<CharT> file;
 	
 	CharT peek() const;
 	CharT pop();
-	bool isEOF() const;
 	
 };
 

@@ -1,29 +1,24 @@
-#include <fstream>
-#include <iostream>
-#include <codecvt>
+#include "file/FileBuffer.hpp"
 #include "lexer/lexer.hpp"
+#include <iostream>
 
 int main(int argc, char* args[]) {
+	
+	typedef char32_t CharT;
 	
 	if (argc != 2) {
 		std::cout << "Filename not specified.";
 		return -1;
 	}
 	
-	typedef char32_t CharT;
-	std::basic_ifstream<CharT> input(args[1], std::ios_base::binary);
-	input.imbue(std::locale(input.getloc(),
-		new std::codecvt_utf8<CharT, 0x10ffff, std::consume_header>
-	));
+	FileBuffer<CharT> file(args[1]);
 	
-	if (!input.is_open()) {
-		std::cout << "Failed to open " << args[1] << ".";
+	if (!file.good()) {
+		std::cout << "Failed to read " << args[1] << ".";
 		return -1;
 	}
 	
-	Lexer<CharT> lexer(input);
-	input.close();
-	
+	Lexer<CharT> lexer(file);
 	Symbol symbol;
 	do {
 		symbol = lexer.next();
