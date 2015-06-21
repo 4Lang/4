@@ -45,7 +45,7 @@ int main () {
 	  
 	  symbol.insert(0, "0x");
 	  
-	  string comment = " //" + line.substr(line.find("("));
+	  string comment = " //" + line.substr(line.find(")")+1);
 	  
 	  line = symbol + comment;
 	  
