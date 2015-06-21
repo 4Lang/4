@@ -8,10 +8,6 @@
 
 using namespace std;
 
-static std::unordered_set<string> emojis;
-
-
-
 int main () {
   ofstream output;
   output.open ("emoji.hpp");
@@ -21,6 +17,13 @@ int main () {
   ifstream myfile ("emoji-data.txt");
   if (myfile.is_open())
   {
+	output << "#ifndef _EMOJI_HPP_"; output << "\n";
+	output << "#define _EMOJI_HPP_"; output << "\n";
+	output << "\n";
+	output << "template <class CharT> bool isEmoji(CharT c) {"; output << "\n";
+	output << "\n";
+	output << "\t"; output << "static const std::unordered_set<CharT> emojis = {"; output << "\n";	
+	  
     while ( getline (myfile,line) )
     {
 	  if (line.at(0)=='#')
@@ -39,15 +42,20 @@ int main () {
 	  
 	  line.insert(0, "0x");
 	  
+	  output << "\t";
+	  output << "\t";
 	  output << line;
+	  output << "\n";
 	  
-      cout << line << '\n';
+      cout << line;
     }
     myfile.close();
 	
-	output << "\n ); return emojis.count(c);";
-	output << "\n } ";
-	output << "\n #endif";
+	output << " \n \t"; output << " };";
+	output << " \n \n";
+	output << "\t"; output << "return emojis.count(c);";
+	output << " \n } ";
+	output << " \n #endif";
 	
 	output.close();
 	
