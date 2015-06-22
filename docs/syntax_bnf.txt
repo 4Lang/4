@@ -1,5 +1,4 @@
 Readability notes:
-[\n]: [NEWLINE]
 [\t]: [INDENT]
 [ ] : [WHITESPACE]
 
@@ -20,52 +19,45 @@ statement
 	: jump_statement
 
 label_statement
-	: [\t]id[COLON][\n][\t]statement[\n]
-	: [\t][CASE]constant_expression[COLON][\n][\t]statement[\n]
-	: [\t][DEFAULT][COLON]statement[\n]
+	: [\t][IDENTIFIER][COLON][\t]statement
+	: [\t][CASE]expression[COLON][\t]statement
+	: [\t][DEFAULT][COLON]statement
 
 expression_statement
-	: expression \n
+	: expression[\t]
 
 compound_statement
-	: [\t]declaration_list[\n][\t]statement_list[\n]
-	: [\t]statement_list[\n]
-	: [\t]declaration_list[\n]
-	: [\t][\n][\t]
+	: [\t]declaration_list[\t]statement_list
+	: [\t]statement_list
+	: [\t]declaration_list
+	: [\t][\t]
 
 statement_list
 	: statement
-	: statement_list[\n]statement
+	: statement_liststatement
 
 selection_statement
-	: [IF]expression[\n][\t]statement[\n]
-	: [IF]expression[\n][\t]statement[\n][ELSE]statement
-	: [SWITCH]expression[\n][\t]statement
+	: [IF]expression[\t]statement
+	: [IF]expression[\t]statement[ELSE]statement
+	: [SWITCH]expression[\t]statement
 
 iteration_statement
-	:[LOOP]expression[\n][\t]statement
-	:[LOOP]expression[ ]expression[\n][\t]statement
-	:[LOOP]expression[ ]expression[ ]expression[\n][\t]statement
-	:statement[\n][\t][LOOP]expression[\n]
-	:statement[\n][\t][LOOP]expression[ ]expression[\n]
+	:[LOOP]expression[\t]statement
+	:[LOOP]expression[ ]expression[\t]statement
+	:[LOOP]expression[ ]expression[ ]expression[\t]statement
+	:statement[\t][LOOP]expression
+	:statement[\t][LOOP]expression[ ]expression
 	
 jump_statement
-	:[GOTO]id[\n]
-	:[CONTINUE][\n]
-	:[BREAK][\n]
-	:[RETURN]exp[\n]
-	:[RETURN][\n]
+	:[GOTO][IDENTIFIER]
+	:[CONTINUE]
+	:[BREAK]
+	:[RETURN]exp
+	:[RETURN]
 
 expression
-	: assignment_expression
-	: expression[COMMA]assignment_expression
-
-assignment_expression
 	: conditional_exppression
-	: unary_expression assignment_operator assignment_exp
-	
-assignment_operator
-	- SEE TOKENS
+	: unary_expression assignment_operator expression
 
 conditional_exppression
 	: logical_or_expression
@@ -78,4 +70,5 @@ logical_or_expression
 	: logical_or_expression[OR_OP]logical_and_expression
 
 logical_and_exp
-	: 
+	: logical_and_exp
+	: logical_or_exp[AND_OP]inclusive_or_exp
