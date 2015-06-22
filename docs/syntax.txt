@@ -1,0 +1,77 @@
+﻿## Expressions
+
+Expression	Description
+-----------------------------
+xℹm		Member access
+
+x🌜...🌛		Method and delegate invocation
+
+x↘️...↙️		Array and indexer access
+
+x⏫		Post-increment
+
+x⏬		Post-decrement
+
+🆕 T🌜...🌛	Object creation
+
+🆕 T🌜...🌛\n
+\t ...		Object creation w/ initializer
+
+
+🆕 T↘️...↙️	Array creation
+
+➕x		Identity
+
+➖x		Negation
+
+🚫x		Logical negation
+
+〰x		Bitwise negation
+
+⏫x		Pre-increment
+
+⏬x		Pre-decrement
+
+xℹ️T		Explicitly convert x to type T
+
+x ✖️ y		Multiplication
+
+x ➗ y		Division
+
+x #️⃣ y		Remainder
+
+
+x ➕ y		Addition, string concatenation
+
+x ➖ y		Subtraction, delegate removal
+
+x ⏪ y		Shift left
+
+x ⏩ y		Shift right
+
+x ◀️ y		Less than
+
+x ▶️ y		Greater than
+
+x ◀️↔️ y		Less than or equal
+
+x ▶️↔️ y		Greater than or equal
+
+x ↔️T		Return true if x is a T, false otherwise
+
+x ↔ y		Equal
+
+x 🚫↔ y		Not equal
+
+x ❤️ y		Integer bitwise AND, boolean logical AND
+
+x 🔼 y		Integer bitwise XOR, boolean logical XOR
+
+x 💔 y		Integer bitwise OR, boolean logical OR
+
+x ❤️❤️ y		Evaluates y only if x is true
+
+x 💔💔 y		Evaluates y only if x is false
+
+x ⬅️ y		Assignment
+
