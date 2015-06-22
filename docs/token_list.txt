@@ -20,8 +20,8 @@ EQUALS       : =   : U+2B05                : ⬅️
 DOT          : .   : U+2139                : ℹ️
 RIGHT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪️⬅️
 LEFT_ASSIGN  : <<= : U+23E9,U+2B05         : ⏩⬅️
-AND_ASSIGN   : &=  : U+274C,U+2B05         : ❌⬅️
-OR_ASSIGN    : |=  : U+2B55,U+2B05         : ⭕️⬅️
+AND_ASSIGN   : &=  : U+2764,U+2B05         : ❌⬅️
+OR_ASSIGN    : |=  : U+1F494,U+2B05        : ⭕️⬅️
 XOR_ASSIGN   : ^=  : U+2B06,U+2B05         : ⬆️⬅️
 SUB_ASSIGN   : -=  : U+2796,U+2B05         : ➖⬅️
 ADD_ASSIGN   : +=  : U+2795,U+2B05         : ➕⬅️
@@ -36,8 +36,8 @@ RIGHT_OP     : >>  : U+23EA                : ⏪
 LEFT_OP      : <<  : U+23E9                : ⏩
 INC_OP       : ++  : U+23EB                : ⏫
 DEC_OP       : --  : U+23EC                : ⏬
-AND_OP       : &&  : U+274C,U+274C         : ❌❌
-OR_OP        : ||  : U+2B55,U+2B55         : ⭕️⭕️
+AND_OP       : &&  : U+2764,U+2764         : ❌❌
+OR_OP        : ||  : U+1F494,U+1F494       : ⭕️⭕️
 LE_OP        : <=  : U+23ED                : ⏭
 GE_OP        : >=  : U+23EE                : ⏮
 EQ_OP        : ==  : U+2194                : ↔️
@@ -45,8 +45,8 @@ NE_OP        : !=  : U+1F6AB,U+2194        : 🚫↔️
 
 TILDE        : ~   : U+3030                : 〰
 NOT          : !   : U+1F6AB               : 🚫
-AND          : &   : U+274C                : ❌
-OR           : |   : U+2B55                : ⭕️
+AND          : &   : U+2764                : ❌
+OR           : |   : U+1F494                : ⭕️
 XOR          : ^   : U+2B06                : ⬆️
 SUB          : -   : U+2796                : ➖
 ADD          : +   : U+2795                : ➕
