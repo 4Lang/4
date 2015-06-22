@@ -1,0 +1,81 @@
+Readability notes:
+[\n]: [NEWLINE]
+[\t]: [INDENT]
+[ ] : [WHITESPACE]
+
+source
+	: statement_or_definition
+	: statement_or_definition source
+ 
+statement_or_definition
+	: statement
+	: definition
+
+statement
+	: label_statement
+	: expression_statement
+	: compound_statement
+	: selection statement
+	: iteration_statement
+	: jump_statement
+
+label_statement
+	: [\t]id[COLON][\n][\t]statement[\n]
+	: [\t][CASE]constant_expression[COLON][\n][\t]statement[\n]
+	: [\t][DEFAULT][COLON]statement[\n]
+
+expression_statement
+	: expression \n
+
+compound_statement
+	: [\t]declaration_list[\n][\t]statement_list[\n]
+	: [\t]statement_list[\n]
+	: [\t]declaration_list[\n]
+	: [\t][\n][\t]
+
+statement_list
+	: statement
+	: statement_list[\n]statement
+
+selection_statement
+	: [IF]expression[\n][\t]statement[\n]
+	: [IF]expression[\n][\t]statement[\n][ELSE]statement
+	: [SWITCH]expression[\n][\t]statement
+
+iteration_statement
+	:[LOOP]expression[\n][\t]statement
+	:[LOOP]expression[ ]expression[\n][\t]statement
+	:[LOOP]expression[ ]expression[ ]expression[\n][\t]statement
+	:statement[\n][\t][LOOP]expression[\n]
+	:statement[\n][\t][LOOP]expression[ ]expression[\n]
+	
+jump_statement
+	:[GOTO]id[\n]
+	:[CONTINUE][\n]
+	:[BREAK][\n]
+	:[RETURN]exp[\n]
+	:[RETURN][\n]
+
+expression
+	: assignment_expression
+	: expression[COMMA]assignment_expression
+
+assignment_expression
+	: conditional_exppression
+	: unary_expression assignment_operator assignment_exp
+	
+assignment_operator
+	- SEE TOKENS
+
+conditional_exppression
+	: logical_or_expression
+
+constant_expression
+	: conditional_exppression
+	
+logical_or_expression
+	: logical_and_expression
+	: logical_or_expression[OR_OP]logical_and_expression
+
+logical_and_exp
+	: 
