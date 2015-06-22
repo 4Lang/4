@@ -6,12 +6,12 @@ ANY_EMOJI = any unicode character listed in
         Regex
 
 INDENT         : ^\s*
-WHITESPACE     : \s+
-COMMENT        : {U+1F4AD - 💬}.*\n
+WHITESPACE     : \s+ OR ⬜️ U+2B1C
+COMMENT        : {U+1F4AD - 💭}.*\n
 COMMENT        : {U+1F532 - 🔲}(.|\n)*{U+1F533 - 🔳}
 INT_LITERAL    : [1-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?([0-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?)*
 FLT_LITERAL    : ([0-9]{U+20E3}?)+{U+2139}([0-9]{U+20E3}?)+
-STR_LITERAL    : {U+1F4AD}[^\n{U+1F4AD}]*{U+1F4AD}
+STR_LITERAL    : {U+1F4AC}[^\n{U+1F4AC}]*{U+1F4AC}
 IDENTIFIER     : ({ANY_EMOJI}|[a-zA-Z_])({ANY_EMOJI}|[a-zA-Z_0-9])*
 
         Operators
@@ -20,15 +20,14 @@ EQUALS       : =   : U+2B05                : ⬅️
 DOT          : .   : U+2139                : ℹ️
 RIGHT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪️⬅️
 LEFT_ASSIGN  : <<= : U+23E9,U+2B05         : ⏩⬅️
-AND_ASSIGN   : &=  : U+2764,U+2B05         : ❌⬅️
-OR_ASSIGN    : |=  : U+1F494,U+2B05        : ⭕️⬅️
-XOR_ASSIGN   : ^=  : U+2B06,U+2B05         : ⬆️⬅️
+AND_ASSIGN   : &=  : U+2764,U+2B05         : ❤️⬅️
+OR_ASSIGN    : |=  : U+1F494,U+2B05        : 💔⬅️
+XOR_ASSIGN   : ^=  : U+1F53C,U+20E3        : 🔼⬅️
 SUB_ASSIGN   : -=  : U+2796,U+2B05         : ➖⬅️
 ADD_ASSIGN   : +=  : U+2795,U+2B05         : ➕⬅️
 MUL_ASSIGN   : *=  : U+2716,U+2B05         : ✖️⬅️
 DIV_ASSIGN   : /=  : U+2797,U+2B05         : ➗⬅️
 MOD_ASSIGN   : %=  : U+0023,U+20E3,U+2B05  : #️⃣⬅️
-POW_ASSIGN   : ^^= : U+1F53C,U+20E3        : 🔼⬅️
 
 LE_OP        : <=  : U+2B05,U+2B05         : ◀️↔️
 GE_OP        : >=  : U+27A1,U+2B05         : ▶️↔️
@@ -36,31 +35,28 @@ RIGHT_OP     : >>  : U+23EA                : ⏪
 LEFT_OP      : <<  : U+23E9                : ⏩
 INC_OP       : ++  : U+23EB                : ⏫
 DEC_OP       : --  : U+23EC                : ⏬
-AND_OP       : &&  : U+2764,U+2764         : ❌❌
-OR_OP        : ||  : U+1F494,U+1F494       : ⭕️⭕️
-LE_OP        : <=  : U+23ED                : ⏭
-GE_OP        : >=  : U+23EE                : ⏮
+AND_OP       : &&  : U+2764,U+2764         : ❤️❤️
+OR_OP        : ||  : U+1F494,U+1F494       : 💔💔
 EQ_OP        : ==  : U+2194                : ↔️
 NE_OP        : !=  : U+1F6AB,U+2194        : 🚫↔️
 
 TILDE        : ~   : U+3030                : 〰
 NOT          : !   : U+1F6AB               : 🚫
-AND          : &   : U+2764                : ❌
-OR           : |   : U+1F494                : ⭕️
-XOR          : ^   : U+2B06                : ⬆️
+AND          : &   : U+2764                : ❤️
+OR           : |   : U+1F494               : 💔
 SUB          : -   : U+2796                : ➖
 ADD          : +   : U+2795                : ➕
 MUL          : *   : U+2716                : ✖️
 DIV          : /   : U+2797                : ➗
 MOD          : %   : U+0023,U+20E3         : #️⃣
-POW          : ^^  : U+1F53C               : 🔼
+XOR          : ^^  : U+1F53C               : 🔼
 LEFT         : <   : U+25C0                : ◀️
 RIGHT        : >   : U+25B6                : ▶️
 
         Other
 
 COMMA        : U+1F4CC      : 📌
-COLON        : U+21A9       : ↩️
+COLON        : U+27A1       : ➡️
 LPARENT      : U+1F31C      : 🌜
 RPARENT      : U+1F31B      : 🌛
 LBRACKET     : U+2198       : ↘️
@@ -68,7 +64,7 @@ RBRACKET     : U+2199       : ↙️
 
         Keywords
 
-VAR      : U+1F340 : 🍀		
+VAR      : U+1F340 : 🍀
 IF       : U+2753  : ❓
 ELSE     : U+2757  : ❗️
 ELSEIF   : U+2049  : ⁉️
