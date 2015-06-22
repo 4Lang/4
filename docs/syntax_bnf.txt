@@ -3,71 +3,71 @@ Readability notes:
 [ ] : [WHITESPACE]
 
 source
-	: statement_or_definition
-	: statement_or_definition source
+	: stat_or_definition
+	: stat_or_definition source
  
-statement_or_definition
-	: statement
+stat_or_definition
+	: stat
 	: definition
 
-statement
-	: label_statement
-	: expression_statement
-	: compound_statement
-	: selection statement
-	: iteration_statement
-	: jump_statement
+stat
+	: label_stat
+	: exp_stat
+	: compound_stat
+	: selection stat
+	: iteration_stat
+	: jump_stat
 
-label_statement
-	: [\t][IDENTIFIER][COLON][\t]statement
-	: [\t][CASE]expression[COLON][\t]statement
-	: [\t][DEFAULT][COLON]statement
+label_stat
+	: [\t][IDENTIFIER][COLON][\t]stat
+	: [\t][CASE]exp[COLON][\t]stat
+	: [\t][DEFAULT][COLON]stat
 
-expression_statement
-	: expression[\t]
+exp_stat
+	: exp[\t]
 
-compound_statement
-	: [\t]declaration_list[\t]statement_list
-	: [\t]statement_list
+compound_stat
+	: [\t]declaration_list[\t]stat_list
+	: [\t]stat_list
 	: [\t]declaration_list
 	: [\t][\t]
 
-statement_list
-	: statement
-	: statement_liststatement
+stat_list
+	: stat
+	: stat_liststat
 
-selection_statement
-	: [IF]expression[\t]statement
-	: [IF]expression[\t]statement[ELSE]statement
-	: [SWITCH]expression[\t]statement
+selection_stat
+	: [IF]exp[\t]stat
+	: [IF]exp[\t]stat[ELSE]stat
+	: [SWITCH]exp[\t]stat
 
-iteration_statement
-	:[LOOP]expression[\t]statement
-	:[LOOP]expression[ ]expression[\t]statement
-	:[LOOP]expression[ ]expression[ ]expression[\t]statement
-	:statement[\t][LOOP]expression
-	:statement[\t][LOOP]expression[ ]expression
+iteration_stat
+	:[LOOP]exp[\t]stat
+	:[LOOP]exp[ ]exp[\t]stat
+	:[LOOP]exp[ ]exp[ ]exp[\t]stat
+	:stat[\t][LOOP]exp
+	:stat[\t][LOOP]exp[ ]exp
 	
-jump_statement
+jump_stat
 	:[GOTO][IDENTIFIER]
 	:[CONTINUE]
 	:[BREAK]
 	:[RETURN]exp
 	:[RETURN]
 
-expression
+exp
 	: conditional_exppression
-	: unary_expression assignment_operator expression
+	: unary_exp assignment_operator exp
 
 conditional_exppression
-	: logical_or_expression
+	: logical_or_exp
 
-constant_expression
+constant_exp
 	: conditional_exppression
 	
-logical_or_expression
-	: logical_and_expression
-	: logical_or_expression[OR_OP]logical_and_expression
+logical_or_exp
+	: logical_and_exp
+	: logical_or_exp[OR_OP]logical_and_exp
 
 logical_and_exp
 	: logical_and_exp
