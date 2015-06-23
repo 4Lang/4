@@ -1,4 +1,4 @@
-# 🍀
+# 🍀, a Language Independent Programming Language
 
 🍀 is a programming language made entirely of emoji.
 
