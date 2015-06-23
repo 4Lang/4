@@ -3,12 +3,15 @@ Readability notes:
 [ ] : [WHITESPACE]
 
 source
-	: stat_or_definition
-	: stat_or_definition source
- 
-stat_or_definition
+	: stat_or_decl
+	: stat_or_decl source
+
+stat_or_decl
 	: stat
 	: definition
+
+decl:
+	: 
 
 stat
 	: label_stat
@@ -60,6 +63,19 @@ jump_stat
 exp
 	: conditional_exppression
 	: unary_exp assignment_operator exp
+
+assignment_operator
+	: EQUALS
+	: MUL_ASSIGN
+	: DIV_ASSIGN
+	: MOD_ASSIGN
+	: ADD_ASSIGN
+	: MIN_ASSIGN
+	: LEFT_ASSIGN
+	: RIGHT_ASSIGN
+	: AND_ASSIGN
+	: XOR_ASSIGN
+	: OR_ASSIGN
 
 conditional_exppression
 	: logical_or_exp
@@ -124,3 +140,39 @@ unary_exp
 	: [INC_OP]unary_exp
 	: [DEC_OP]unary_exp
 	: unary_operator cast_exp
+	: ??? 'sizeof' unary_exp
+	: ??? 'sizeof' '(' type_name ')'
+
+unary_operator
+	: EQUALS
+	: MUL
+	: ADD
+	: MIN
+	: TILDE
+	: NOT
+
+postfix_exp
+	: primary_exp
+	: postfix_exp[LBRACKET]exp[RBRACKET]
+	: postfix_exp[LPARENT]argument_exp_list[RPARENT]
+	: postfix_exp[LPARENT][RPARENT]
+	: postfix_exp[DOT]id
+	: postfix_exp[INC_OP]
+	: postfix_exp[DEC_OP]
+
+primary_exp
+	: [IDENTIFIER]
+	: const
+	: string
+	: [LBRACKET]exp[RBRACKET]
+
+argument_exp_list
+	: assignment_exp
+	: argument_exp_list[COMMA]assignment_exp
+
+const
+	: int_const
+	: char_const
+	: float_const
+	: enumeration_const
+
