@@ -8,28 +8,28 @@
 
 🍀 makes use of emojis to create a universally understandable syntax.
 
+
 Beginner programmer, ready for a first language?
-
 Novice programmer, want another language under your belt?
-
 Expert programmer, looking for something a little more powerful?
-
-Try 🍀.
-
+Give 🍀 a shot!
 
 🍀 is still a work in progress, so please help contribute!
 
 ## Final Goals
-- compiler
+- Compiler
+- Awesome libraries
 
 Mobile
 - IDE app (Android, iOS, WinPhone)
-- virtual keyboard software
-- custom emoji font tailored for 🍀
+- Virtual keyboard app
+- Custom emoji font, tailored for 🍀 programming
 
 Desktop
 - IDE
-- Completely custom physical mechanical keyboard
+- Key-mapping software
+- Custom keycaps, to be placed on physical keyboards
+- Custom physical mechanical keyboard
 
 ## Current Work
 - Sample code
