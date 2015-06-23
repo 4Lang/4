@@ -17,7 +17,8 @@ so please help contribute!
 
 Mobile
 - IDE app (Android, iOS, WinPhone)
-- virtual keyboard software for MOSes with custom emojis tailed for 🍀 usage
+- virtual keyboard software
+- custom emoji font tailored for 🍀
 
 Desktop
 - IDE
