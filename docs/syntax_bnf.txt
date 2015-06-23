@@ -3,15 +3,34 @@ Readability notes:
 [ ] : [WHITESPACE]
 
 source
-	: stat_or_decl
-	: stat_or_decl source
+	: stat_or_def
+	: stat_or_def source
 
 stat_or_decl
 	: stat
-	: definition
+	: def
 
-decl:
-	: 
+def
+	: function_def
+	: decl
+
+function_def
+	: decl_specs declarator decl_list compound_stat
+	:            declarator decl_list compound_stat
+	: decl_specs declarator           compound_stat
+	:            declarator           compound_stat
+	
+decl
+	: decl_specs init_delcarator_list[\t]
+	: decl_specs                     [\t]
+
+decl_specs
+	: storage_class_spec decl_specs
+	: storage_class_spec
+	: type_spec decl_specs
+	: type_spec
+	: type_qualifier decl_specs
+	: type_qualifier
 
 stat
 	: label_stat
@@ -30,9 +49,9 @@ exp_stat
 	: exp[\t]
 
 compound_stat
-	: [\t]declaration_list[\t]stat_list
+	: [\t]decl_list[\t]stat_list
 	: [\t]stat_list
-	: [\t]declaration_list
+	: [\t]decl_list
 	: [\t][\t]
 
 stat_list
