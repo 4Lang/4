@@ -3,16 +3,21 @@
 🍀 is an easy-to-use programming language made entirely of emojis.
 
 🍀 aims to create a clear, understandable, and powerful programming language.
+
 🍀 is for both beginner and expert programmers. 
+
 🍀 makes use of emojis to create a universally understandable syntax.
 
-Beginnger programmer, ready for a first language?
+Beginner programmer, ready for a first language?
+
 Novice programmer, want another language under your belt?
+
 Expert programmer, looking for something a little more powerful?
+
 Try 🍀.
 
-🍀 is still a work in progress,
-so please help contribute!
+
+🍀 is still a work in progress, so please help contribute!
 
 ## Final Goals
 - compiler
