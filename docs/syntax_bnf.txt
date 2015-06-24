@@ -178,6 +178,7 @@ primary_exp
 	: const
 	: string
 	: [LBRACKET]exp[RBRACKET]
+	: [IDENTIFIER][LPARENT]argument_list[RPARENT]
 
 argument_exp_list
 	: assignment_exp
