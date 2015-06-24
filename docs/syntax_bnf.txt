@@ -175,18 +175,10 @@ postfix_exp
 
 primary_exp
 	: [IDENTIFIER]
-	: const
-	: string
-	: [LBRACKET]exp[RBRACKET]
-	: [IDENTIFIER][WHITESPACE]argument_list
+	: [STRING_LIT]
+	: [WHITESPACE]argument_exp_list
 
 argument_exp_list
 	: assignment_exp
-	: argument_exp_list[COMMA]assignment_exp
-
-const
-	: int_const
-	: char_const
-	: float_const
-	: enumeration_const
+	: argument_exp_list[WHITESPACE]assignment_exp
 
