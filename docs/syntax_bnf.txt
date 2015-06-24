@@ -3,80 +3,54 @@ Readability notes:
 [ ] : [WHITESPACE]
 
 source
-	: stat_or_def
-	: stat_or_def source
+	: statement_or_definiton
+	: statement_or_definiton source
 
-stat_or_decl
-	: stat
-	: def
+statement_or_definiton
+	: statement
+	: definition
 
-def
-	: function_def
-	: decl
+statement
+    : compound_statement
+	: label_statement
+	: expression
+	: selection_statement
+	: iteration_statement
+	: jump_statement
+	: statement_list
 
-function_def
-	: decl_specs declarator decl_list compound_stat
-	:            declarator decl_list compound_stat
-	: decl_specs declarator           compound_stat
-	:            declarator           compound_stat
-	
-decl
-	: decl_specs init_delcarator_list[\t]
-	: decl_specs                     [\t]
+compound_statement
+	: INDENT statement
+	: compound_statement INDENT statement
 
-decl_specs
-	: storage_class_spec decl_specs
-	: storage_class_spec
-	: type_spec decl_specs
-	: type_spec
-	: type_qualifier decl_specs
-	: type_qualifier
+label_statement
+	: [\t][IDENTIFIER][\t]statment
+	: [\t][CASE]expression[\t]statment
+	: [\t][DEFAULT][\t]statment
 
-stat
-	: label_stat
-	: exp_stat
-	: compound_stat
-	: selection_stat
-	: iteration_stat
-	: jump_stat
+statement_list
+	: [\t]statement
+	: [\t]statement_list
 
-label_stat
-	: [\t][IDENTIFIER][COLON][\t]stat
-	: [\t][CASE]exp[COLON][\t]stat
-	: [\t][DEFAULT][COLON]stat
+selection_statement
+	: [IF]expression[\t]statement
+	: [IF]expression[\t]statement[ELSE]statement
+	: [SWITCH]expression[\t]statement
 
-exp_stat
-	: exp[\t]
+iteration_statement
+	:[LOOP]expression[\t]statement
+	:[LOOP]expression[ ]expression[\t]statement
+	:[LOOP]expression[ ]expression[ ]expression[\t]statement
+	:[LOOP]expression[COLON]expression[\t]statement
+	:statement[\t][LOOP]expression
+	:statement[\t][LOOP]expression[ ]expression
+	:statement[\t][LOOP]expression[COLON]expression
 
-compound_stat
-	: [\t]decl_list[\t]stat_list
-	: [\t]stat_list
-	: [\t]decl_list
-	: [\t][\t]
-
-stat_list
-	: stat
-	: stat_liststat
-
-selection_stat
-	: [IF]exp[\t]stat
-	: [IF]exp[\t]stat[ELSE]stat
-	: [SWITCH]exp[\t]stat
-
-iteration_stat
-	:[LOOP]exp[\t]stat
-	:[LOOP]exp[ ]exp[\t]stat
-	:[LOOP]exp[ ]exp[ ]exp[\t]stat
-	:[LOOP]exp[COLON]exp[\t]stat
-	:stat[\t][LOOP]exp
-	:stat[\t][LOOP]exp[ ]exp
-	:stat[\t][LOOP]exp[COLON]exp
-
-jump_stat
+jump_statement
 	:[GOTO][IDENTIFIER]
 	:[CONTINUE]
 	:[BREAK]
-	:[RETURN]exp
+	:[RETURN]expression
 	:[RETURN]
 
 expression
