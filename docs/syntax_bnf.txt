@@ -79,106 +79,74 @@ jump_stat
 	:[RETURN]exp
 	:[RETURN]
 
-exp
-        : logical_or_exp
-        : unary_exp [EQUALS]       exp
-        : unary_exp [MUL_ASSIGN]   exp
-        : unary_exp [DIV_ASSIGN]   exp
-        : unary_exp [MOD_ASSIGN]   exp
-        : unary_exp [ADD_ASSIGN]   exp
-        : unary_exp [MIN_ASSIGN]   exp
-        : unary_exp [LEFT_ASSIGN]  exp
-        : unary_exp [RIGHT_ASSIGN] exp
-        : unary_exp [AND_ASSIGN]   exp
-        : unary_exp [XOR_ASSIGN]   exp
-        : unary_exp [OR_ASSIGN]    exp
-
-constant_exp
-	: conditional_exppression
-	
-logical_or_exp
-	: logical_and_exp
-	: logical_or_exp[OR_OP]logical_and_exp
-
-logical_and_exp
-	: logical_and_exp
-	: logical_or_exp[AND_OP]inclusive_or_exp
-	
-inclusive_or_exp
-	: exclusive_or_exp
-	: inclusive_or_exp 
-	
-exclusive_or_exp
-	: and_exp
-	: exclusive_or_exp[XOR]and_exp
-
-and_exp
-	: equality_exp
-	: and_exp[AND]equality_exp
-
-equality_exp
-	: relational_exp
-	: equality_exp[EQ_OP]relational_exp
-	: equality_exp[NE_OP]relational_exp
-
-relational_exp
-	: shift_exp
-	: relational_exp[LEFT]shift_exp
-	: relational_exp[RIGHT]shift_exp
-	: relational_exp[LE_OP]shift_exp
-	: relational_exp[GE_OP]shift_exp
-
-shift_exp
-	: additive_exp
-	: shift_exp[LEFT_OP]additive_exp
-	: shift_exp[RIGHT_OP]additive_exp
-	
-additive_exp
-	: mult_exp
-	: additive_exp[ADD]mult_exp
-	: additive_exp[MIN]mult_exp
-
-mult_exp
-	: cast_exp
-	: mult_exp[MUL]cast_exp
-	: mult_exp[DIV]cast_exp
-	: mult_exp[MOD]cast_exp
-
-cast_exp
-	: unary_exp
-	: cast_exp[DOT]type_name
-
-unary_exp
-	: postfix_exp
-	: [INC_OP]unary_exp
-	: [DEC_OP]unary_exp
-	: unary_operator cast_exp
-	: ??? 'sizeof' unary_exp
-	: ??? 'sizeof' '(' type_name ')'
-
-unary_operator
-	: EQUALS
-	: MUL
-	: ADD
-	: MIN
-	: TILDE
-	: NOT
-
-postfix_exp
-	: primary_exp
-	: postfix_exp[LBRACKET]exp[RBRACKET]
-	: postfix_exp[LPARENT]argument_exp_list[RPARENT]
-	: postfix_exp[LPARENT][RPARENT]
-	: postfix_exp[DOT]id
-	: postfix_exp[INC_OP]
-	: postfix_exp[DEC_OP]
-
-primary_exp
-	: [IDENTIFIER]
-	: [STRING_LIT]
-	: [WHITESPACE]argument_exp_list
-
-argument_exp_list
-	: assignment_exp
-	: argument_exp_list[WHITESPACE]assignment_exp
-
+expression
+        : logical_or_expression
+        : unary_expression EQUALS       expression
+        : unary_expression MUL_ASSIGN   expression
+        : unary_expression DIV_ASSIGN   expression
+        : unary_expression MOD_ASSIGN   expression
+        : unary_expression ADD_ASSIGN   expression
+        : unary_expression MIN_ASSIGN   expression
+        : unary_expression LEFT_ASSIGN  expression
+        : unary_expression RIGHT_ASSIGN expression
+        : unary_expression AND_ASSIGN   expression
+        : unary_expression XOR_ASSIGN   expression
+        : unary_expression OR_ASSIGN    expression
+logical_or_expression
+        : logical_and_expression
+        : logical_or_expression OR_OP logical_and_expression
+logical_and_expression
+        : inclusive_or_expression
+        : logical_and_expression AND_OP inclusive_or_expression
+inclusive_or_expression
+        : exclusive_or_expression
+        : inclusive_or_expression OR exclusive_or_expression
+exclusive_or_expression
+        : and_expression
+        : exclusive_or_expression XOR and_expression
+and_expression
+        : equality_expression
+        : and_expression AND equality_expression
+equality_expression
+        : relational_expression
+        : equality_expression  EQ_OP relational_expression
+        : equality_expression NEQ_OP relational_expression
+relational_expression
+        : shift_expression
+        : relational_expression LEFT  shift_expression
+        : relational_expression RIGHT shift_expression
+        : relational_expression LE_OP shift_expression
+        : relational_expression GE_OP shift_expression
+shift_expression
+        : additive_expression
+        : shift_expression LEFT_OP  additive_expression
+        : shift_expression RIGHT_OP additive_expression
+additive_expression
+        : multiplicative_expression
+        : additive_expression ADD multiplicative_expression
+        : additive_expression SUB multiplicative_expression
+multiplicative_expression
+        : unary_expression
+        : multiplicative_expression MUL unary_expression
+        : multiplicative_expression DIV unary_expression
+        : multiplicative_expression MOD unary_expression
+unary_expression
+        : postfix_expression
+        : INC_OP unary_expression
+        : DEC_OP unary_expression
+        : ADD    unary_expression
+        : SUB    unary_expression
+        : TILDE  unary_expression
+        : NOT    unary_expression
+postfix_expression
+        : primary_expression
+        : postfix_expression INC_OP
+        : postfix_expression DEC_OP
+        : postfix_expression DOT IDENTIFIER
+        : postfix_expression LBRACKET expression RBRACKET
+primary_expression
+        : IDENTIFIER
+        : INT_LITERAL
+        : FLT_LITERAL
+        : STR_LITERAL
+        : LPARENT expression RPARENT
