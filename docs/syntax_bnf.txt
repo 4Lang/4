@@ -24,9 +24,9 @@ compound_statement
 	: compound_statement INDENT statement
 
 label_statement
-	: [\t][IDENTIFIER][\t]statment
-	: [\t][CASE]expression[\t]statment
-	: [\t][DEFAULT][\t]statment
+	: [\t][IDENTIFIER][\t]statement
+	: [\t][CASE]expression[\t]statement
+	: [\t][DEFAULT][\t]statement
 
 statement_list
 	: [\t]statement
