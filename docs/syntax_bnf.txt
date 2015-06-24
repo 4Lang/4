@@ -143,7 +143,16 @@ postfix_expression
         : postfix_expression INC_OP
         : postfix_expression DEC_OP
         : postfix_expression DOT IDENTIFIER
-        : postfix_expression LBRACKET expression RBRACKET
+		: postfix_expression LBRACKET IDENTIFIER RBRACKET
+		: postfix_expression LPARENT argument_list RPARENT
+
+argument_list
+        : argument
+        : argument_list COMMA argument
+		
+argument
+        : expression
+		
 primary_expression
         : IDENTIFIER
         : INT_LITERAL
