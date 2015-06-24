@@ -138,25 +138,20 @@ unary_expression
         : SUB    unary_expression
         : TILDE  unary_expression
         : NOT    unary_expression
-
 postfix_expression
         : primary_expression
         : postfix_expression INC_OP
         : postfix_expression DEC_OP
         : postfix_expression DOT IDENTIFIER
-		: postfix_expression LBRACKET expression RBRACKET
-
+        : postfix_expression LBRACKET expression RBRACKET
 primary_expression
         : IDENTIFIER
+        : IDENTIFIER LPARENT argument_list RPARENT
+        : IDENTIFIER LPARENT RPARENT
         : INT_LITERAL
         : FLT_LITERAL
         : STR_LITERAL
         : LPARENT expression RPARENT
-		: IDENTIFIER LPARENT argument_list RPARENT
-
 argument_list
-        : argument
-        : argument_list WHITESPACE argument
-		
-argument
         : expression
+        : argument_list COMMA expression
