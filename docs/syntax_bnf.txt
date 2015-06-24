@@ -145,18 +145,27 @@ postfix_expression
         : postfix_expression DEC_OP
         : postfix_expression DOT IDENTIFIER
 		: postfix_expression LBRACKET expression RBRACKET
-		: postfix_expression LPARENT argument_list RPARENT
 
-argument_list
-        : argument
-        : argument_list COMMA argument
-		
-argument
-        : expression
-		
 primary_expression
         : IDENTIFIER
         : INT_LITERAL
         : FLT_LITERAL
         : STR_LITERAL
         : LPARENT expression RPARENT
+		: IDENTIFIER LPARENT argument_list RPARENT
+		: IDENTIFIER WHITESPACE primary_expression_nested
+	
+primary_expression_nested
+		: IDENTIFIER
+        : INT_LITERAL
+        : FLT_LITERAL
+        : STR_LITERAL
+        : LPARENT expression RPARENT
+		: IDENTIFIER LPARENT argument_list RPARENT
+
+argument_list
+        : argument
+        : argument_list WHITESPACE argument
+		
+argument
+        : expression
