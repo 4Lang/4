@@ -80,24 +80,18 @@ jump_stat
 	:[RETURN]
 
 exp
-	: conditional_exppression
-	: unary_exp assignment_operator exp
-
-assignment_operator
-	: EQUALS
-	: MUL_ASSIGN
-	: DIV_ASSIGN
-	: MOD_ASSIGN
-	: ADD_ASSIGN
-	: MIN_ASSIGN
-	: LEFT_ASSIGN
-	: RIGHT_ASSIGN
-	: AND_ASSIGN
-	: XOR_ASSIGN
-	: OR_ASSIGN
-
-conditional_exppression
-	: logical_or_exp
+        : logical_or_exp
+        : unary_exp EQUALS       exp
+        : unary_exp MUL_ASSIGN   exp
+        : unary_exp DIV_ASSIGN   exp
+        : unary_exp MOD_ASSIGN   exp
+        : unary_exp ADD_ASSIGN   exp
+        : unary_exp MIN_ASSIGN   exp
+        : unary_exp LEFT_ASSIGN  exp
+        : unary_exp RIGHT_ASSIGN exp
+        : unary_exp AND_ASSIGN   exp
+        : unary_exp XOR_ASSIGN   exp
+        : unary_exp OR_ASSIGN    exp
 
 constant_exp
 	: conditional_exppression
@@ -128,16 +122,16 @@ equality_exp
 	: equality_exp[NE_OP]relational_exp
 
 relational_exp
-	: shift_expression
-	: relational_exp[LEFT]shift_expression
-	: relational_exp[RIGHT]shift_expression
-	: relational_exp[LE_OP]shift_expression
-	: relational_exp[GE_OP]shift_expression
+	: shift_exp
+	: relational_exp[LEFT]shift_exp
+	: relational_exp[RIGHT]shift_exp
+	: relational_exp[LE_OP]shift_exp
+	: relational_exp[GE_OP]shift_exp
 
-shift_expression
+shift_exp
 	: additive_exp
-	: shift_expression[LEFT_OP]additive_exp
-	: shift_expression[RIGHT_OP]additive_exp
+	: shift_exp[LEFT_OP]additive_exp
+	: shift_exp[RIGHT_OP]additive_exp
 	
 additive_exp
 	: mult_exp
