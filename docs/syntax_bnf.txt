@@ -81,17 +81,17 @@ jump_stat
 
 exp
         : logical_or_exp
-        : unary_exp EQUALS       exp
-        : unary_exp MUL_ASSIGN   exp
-        : unary_exp DIV_ASSIGN   exp
-        : unary_exp MOD_ASSIGN   exp
-        : unary_exp ADD_ASSIGN   exp
-        : unary_exp MIN_ASSIGN   exp
-        : unary_exp LEFT_ASSIGN  exp
-        : unary_exp RIGHT_ASSIGN exp
-        : unary_exp AND_ASSIGN   exp
-        : unary_exp XOR_ASSIGN   exp
-        : unary_exp OR_ASSIGN    exp
+        : unary_exp [EQUALS]       exp
+        : unary_exp [MUL_ASSIGN]   exp
+        : unary_exp [DIV_ASSIGN]   exp
+        : unary_exp [MOD_ASSIGN]   exp
+        : unary_exp [ADD_ASSIGN]   exp
+        : unary_exp [MIN_ASSIGN]   exp
+        : unary_exp [LEFT_ASSIGN]  exp
+        : unary_exp [RIGHT_ASSIGN] exp
+        : unary_exp [AND_ASSIGN]   exp
+        : unary_exp [XOR_ASSIGN]   exp
+        : unary_exp [OR_ASSIGN]    exp
 
 constant_exp
 	: conditional_exppression
