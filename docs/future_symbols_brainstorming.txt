@@ -21,6 +21,7 @@ VAR    : U+1F340                         : 🍀
 BOOL   : U+270C                          : ✌️
 
 CHAR   : U+1F521                         : 🔡
+
 STRING : U+1F524                         : 🔤
 
 BYTE   : U+1F522                         : 🔢
