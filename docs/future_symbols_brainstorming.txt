@@ -11,6 +11,8 @@ TRY      : U+26A0  : ⚠️
 CATCH    : U+26D4  : ⛔️
 FINALLY  : U+1F3C1 : 🏁
 
+NEW      : U+1F195 : 🆕
+
         Other
 
         Types
