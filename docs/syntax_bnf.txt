@@ -12,6 +12,7 @@ statement
 	: CONTINUE
 	: BREAK
 	: IDENTIFIER argument_list
+	: FUNC IDENTIFIER parameter_list compound_statement
 compound_statement
 	: INDENT statement
 	: compound_statement INDENT statement
