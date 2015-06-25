@@ -15,7 +15,7 @@ FINALLY  : U+1F3C1 : 🏁
 COLON    : U+27A1  : ➡️
 
         Types
-BOOL   : U+270C                          : ✌️
+BOOL   : U+270C                          : ☯️
 CHAR   : U+1F521                         : 🔡
 STRING : U+1F524                         : 🔤
 
