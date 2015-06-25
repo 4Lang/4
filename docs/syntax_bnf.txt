@@ -101,8 +101,8 @@ lvalue_expression
 	: IDENTIFIER
 	: lvalue_expression DOT IDENTIFIER
 	: lvalue_expression LBRACKET expression RBRACKET
-	: lvalue_expression LBRACKET RBRACKET
-	: lvalue_expression EBRACKET
+	: lvalue_expression DBRACKET
+	: lvalue_expression UBRACKET
 argument_list
 	: expression
 	: argument_list COMMA expression
