@@ -65,7 +65,7 @@ RBRACKET     : U+1F448      : 👈
 IF       : U+2753  : ❓
 ELSE     : U+2757  : ❗️
 ELSEIF   : U+2049  : ⁉️
-LOOP     : U+1F503 : 🔃
+WHILE    : U+1F503 : 🔃
 BREAK    : U+270B  : ✋
 CONTINUE : U+21AA  : ↪️
 GOTO     : U+1F3C3 : 🏃
