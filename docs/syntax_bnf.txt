@@ -4,7 +4,7 @@ source
 statement
 	: expression
 	: IDENTIFIER COLON
-	: GOTO IDENTIFIER
+	: GOTO expression
 	: IF     expression compound_statement
 	: ELSEIF expression compound_statement
 	: ELSE              compound_statement
