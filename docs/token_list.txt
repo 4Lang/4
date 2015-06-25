@@ -53,7 +53,6 @@ LT           : <   : U+25C0                : ◀️
 GT           : >   : U+25B6                : ▶️
 
         Other
-
 		
 COMMA    : \s+
 COLON    : U+27A1  : ➡️

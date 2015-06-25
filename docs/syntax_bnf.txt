@@ -19,26 +19,19 @@ compound_statement
 	: INDENT statement
 	: compound_statement INDENT statement
 	
-lvalue_expression
-	: IDENTIFIER
-	: lvalue_expression DOT IDENTIFIER
-	: lvalue_expression LBRACKET expression RBRACKET
-	: lvalue_expression LBRACKET RBRACKET
-	: lvalue_expression EBRACKET
-
 expression
 	: logical_or_expression
-	: unary_expression EQUALS        expression
-	: unary_expression MUL_ASSIGN    expression
-	: unary_expression DIV_ASSIGN    expression
-	: unary_expression MOD_ASSIGN    expression
-	: unary_expression ADD_ASSIGN    expression
-	: unary_expression MIN_ASSIGN    expression
-	: unary_expression LSHIFT_ASSIGN expression
-	: unary_expression RSHIFT_ASSIGN expression
-	: unary_expression AND_ASSIGN    expression
-	: unary_expression XOR_ASSIGN    expression
-	: unary_expression OR_ASSIGN     expression
+	: lvalue_expression EQUALS        expression
+	: lvalue_expression MUL_ASSIGN    expression
+	: lvalue_expression DIV_ASSIGN    expression
+	: lvalue_expression MOD_ASSIGN    expression
+	: lvalue_expression ADD_ASSIGN    expression
+	: lvalue_expression MIN_ASSIGN    expression
+	: lvalue_expression LSHIFT_ASSIGN expression
+	: lvalue_expression RSHIFT_ASSIGN expression
+	: lvalue_expression AND_ASSIGN    expression
+	: lvalue_expression XOR_ASSIGN    expression
+	: lvalue_expression OR_ASSIGN     expression
 logical_or_expression
 	: logical_and_expression
 	: logical_or_expression OR_OP logical_and_expression
@@ -103,6 +96,12 @@ primary_expression
 	: TRUE
 	: FALSE
 	: LPARENT expression RPARENT
+lvalue_expression
+	: IDENTIFIER
+	: lvalue_expression DOT IDENTIFIER
+	: lvalue_expression LBRACKET expression RBRACKET
+	: lvalue_expression LBRACKET RBRACKET
+	: lvalue_expression EBRACKET
 argument_list
 	: expression
 	: argument_list COMMA expression
