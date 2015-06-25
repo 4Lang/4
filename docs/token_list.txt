@@ -54,8 +54,8 @@ GT           : >   : U+25B6                : ▶️
 
         Other
 
-COLON    : U+27A1  : ➡️
 COMMA    : \s+
+COLON    : U+27A1  : ➡️
 LPARENT  : U+1F31C : 🌜
 RPARENT  : U+1F31B : 🌛
 LBRACKET : U+1F449 : 👉
