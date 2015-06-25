@@ -1,6 +1,6 @@
 ﻿        Keywords
 
-RETURN   : U+2934  : ⤴️
+
 STRUCT   : U+1F3E2 : 🏢
 
 SWITCH   : U+1F6A6 : 🚦

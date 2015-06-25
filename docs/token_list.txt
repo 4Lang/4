@@ -54,6 +54,7 @@ GT           : >   : U+25B6                : ▶️
 
         Other
 
+		
 COMMA    : \s+
 COLON    : U+27A1  : ➡️
 LPARENT  : U+1F31C : 🌜
@@ -62,7 +63,8 @@ LBRACKET : U+1F449 : 👉
 RBRACKET : U+1F448 : 👈
 
         Keywords
-
+FUNC     : U+1F340 : 🍀
+RETURN   : U+2934  : ⤴️
 IF       : U+2753  : ❓
 ELSE     : U+2757  : ❗️
 ELSEIF   : U+2049  : ⁉️
