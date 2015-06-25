@@ -18,7 +18,6 @@ statement
 compound_statement
 	: INDENT statement
 	: compound_statement INDENT statement
-	
 expression
 	: logical_or_expression
 	: lvalue_expression EQUALS        expression
@@ -90,7 +89,7 @@ primary_expression
 	: IDENTIFIER
 	: IDENTIFIER LPARENT argument_list RPARENT
 	: IDENTIFIER LPARENT RPARENT
-	: VOID
+	: NULL
 	: INT_LITERAL
 	: FLT_LITERAL
 	: STR_LITERAL
