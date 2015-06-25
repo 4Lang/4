@@ -15,14 +15,11 @@ FINALLY  : U+1F3C1 : 🏁
 COLON    : U+27A1  : ➡️
 
         Types
-<<<<<<< HEAD
 	
 VAR    : U+1F340                         : 🍀		
 
 BOOL   : U+270C                          : ✌️
-=======
-BOOL   : U+270C                          : ☯️
->>>>>>> origin/master
+
 CHAR   : U+1F521                         : 🔡
 STRING : U+1F524                         : 🔤
 
