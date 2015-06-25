@@ -20,7 +20,7 @@ compound_statement
 	: compound_statement INDENT statement
 expression
 	: logical_or_expression
-	: lvalue_expression EQUALS        expression
+	: lvalue_expression EQ_ASSIGN     expression
 	: lvalue_expression MUL_ASSIGN    expression
 	: lvalue_expression DIV_ASSIGN    expression
 	: lvalue_expression MOD_ASSIGN    expression

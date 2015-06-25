@@ -15,8 +15,8 @@ IDENTIFIER     : ({ANY_EMOJI}|[a-zA-Z_])({ANY_EMOJI}|[a-zA-Z_0-9])*
 
         Operators
 
-EQUALS        : =   : U+2B05                : ⬅️
 DOT           : .   : U+1F4A7               : 💧
+EQ_ASSIGN     : =   : U+2B05                : ⬅️
 RSHIFT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪⬅️
 LSHIFT_ASSIGN : <<= : U+23E9,U+2B05         : ⏩⬅️
 AND_ASSIGN    : &=  : U+2764,U+2B05         : ❤⬅️
@@ -32,10 +32,10 @@ LE_OP        : <=  : U+2B05,U+2B05         : ◀️↔️
 GE_OP        : >=  : U+27A1,U+2B05         : ▶️↔️
 RSHIFT_OP    : >>  : U+23EA                : ⏪
 LSHIFT_OP    : <<  : U+23E9                : ⏩
-INC_OP       : ++  : U+23EB                : ⏫
-DEC_OP       : --  : U+23EC                : ⏬
 AND_OP       : &&  : U+2764,U+2764         : ❤️❤️
 OR_OP        : ||  : U+1F494,U+1F494       : 💔💔
+INC_OP       : ++  : U+23EB                : ⏫
+DEC_OP       : --  : U+23EC                : ⏬
 EQ_OP        : ==  : U+2194                : ↔️
 NE_OP        : !=  : U+1F6AB,U+2194        : 🚫↔️
 
