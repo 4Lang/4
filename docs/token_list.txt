@@ -73,5 +73,5 @@ WHILE    : U+1F503 : 🔃
 BREAK    : U+270B  : ✋
 CONTINUE : U+21AA  : ↪️
 GOTO     : U+1F3C3 : 🏃
-TRUE     : U+1F44D : 👍
-FALSE    : U+1F44E : 👎
+TRUE     : U+1F44D : 😀
+FALSE    : U+1F44E : 😞
