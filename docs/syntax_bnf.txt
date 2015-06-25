@@ -13,6 +13,8 @@ statement
 	: BREAK
 	: IDENTIFIER argument_list
 	: FUNC IDENTIFIER parameter_list compound_statement
+	: RETURN
+	: RETURN expression
 compound_statement
 	: INDENT statement
 	: compound_statement INDENT statement
@@ -94,3 +96,6 @@ primary_expression
 argument_list
 	: expression
 	: argument_list COMMA expression
+parameter_list
+	: IDENTIFIER
+	: parameter_list COMMA IDENTIFIER
