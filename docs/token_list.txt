@@ -30,8 +30,8 @@ MOD_ASSIGN    : %=  : U+0023,U+20E3,U+2B05  : #️⃣⬅
 
 LE_OP        : <=  : U+2B05,U+2B05         : ◀️↔️
 GE_OP        : >=  : U+27A1,U+2B05         : ▶️↔️
-R_OP         : >>  : U+23EA                : ⏪
-L_OP         : <<  : U+23E9                : ⏩
+RSHIFT_OP    : >>  : U+23EA                : ⏪
+LSHIFT_OP    : <<  : U+23E9                : ⏩
 INC_OP       : ++  : U+23EB                : ⏫
 DEC_OP       : --  : U+23EC                : ⏬
 AND_OP       : &&  : U+2764,U+2764         : ❤️❤️
