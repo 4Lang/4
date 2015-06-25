@@ -1,0 +1,36 @@
+﻿        Keywords
+
+RETURN   : U+2934  : ⤴️
+STRUCT   : U+1F3E2 : 🏢
+
+SWITCH   : U+1F6A6 : 🚦
+CASE     : U+1F4A1 : 💡
+DEFAULT  : U+1F526 : 🔦
+
+TRY      : U+26A0  : ⚠️
+CATCH    : U+26D4  : ⛔️
+FINALLY  : U+1F3C1 : 🏁
+
+        Other
+COLON    : U+27A1  : ➡️
+
+        Types
+BOOL   : U+270C                          : ✌️
+CHAR   : U+1F521                         : 🔡
+STRING : U+1F524                         : 🔤
+BYTE   : U+1F522                         : 🔢
+SHORT  : U+1F522,U+1F522                 : 🔢🔢
+INT    : U+1F522,U+1F522,U+1F522         : 🔢🔢🔢
+LONG   : U+1F522,U+1F522,U+1F522,U+1F522 : 🔢🔢🔢🔢
+FLOAT  : U+1F4B1,U+1F4A7                 : 🔢💧
+DOUBLE : U+1F4B1,U+1F4B1,U+1F4A7         : 🔢🔢💧
+ENUM   : U+1F523                         : 🔣
+
+
+        OOP
+PRIVATE          : U+1F311         : 🌑
+*RESEVRED        : U+1F312,U+1F318 : 🌒🌘
+PACKAGE-PRIVATE  : U+1F313         : 🌓🌗
+PROTECTED        : U+1F314,U+1F316 : 🌔🌖
+PUBLIC           : U+1F315         : 🌕
+

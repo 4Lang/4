@@ -6,12 +6,13 @@ ANY_EMOJI = any unicode character listed in
         Regex
 
 INDENT         : ^\s*
-WHITESPACE     : \s+ OR ⬜️ U+2B1C
+WHITESPACE     : \s+
 COMMENT        : {U+1F4AD - 💭}.*\n
 COMMENT        : {U+1F532 - 🔲}(.|\n)*{U+1F533 - 🔳}
 INT_LITERAL    : [1-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?([0-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?)*
 FLT_LITERAL    : ([0-9]{U+20E3}?)+{U+1F4A7}([0-9]{U+20E3}?)+
 STR_LITERAL    : {U+1F4AC}[^\n{U+1F4AC}]*{U+1F4AC}
+BLN_LITERAL    : (U+1F44D - 👍),(U+1F44E : 👎)
 IDENTIFIER     : ({ANY_EMOJI}|[a-zA-Z_])({ANY_EMOJI}|[a-zA-Z_0-9])*
 
         Operators
@@ -55,8 +56,7 @@ RIGHT        : >   : U+25B6                : ▶️
 
         Other
 
-COMMA        : U+1F4CC      : 📌
-COLON        : U+27A1       : ➡️
+COMMA        : \s+
 LPARENT      : U+1F31C      : 🌜
 RPARENT      : U+1F31B      : 🌛
 LBRACKET     : U+1F449      : 👉
@@ -68,17 +68,7 @@ VAR      : U+1F340 : 🍀
 IF       : U+2753  : ❓
 ELSE     : U+2757  : ❗️
 ELSEIF   : U+2049  : ⁉️
-LOOP     : U+1F503 : 🔃
-SWITCH   : U+1F6A6 : 🚦
-CASE     : U+1F4A1 : 💡
-DEFAULT  : U+1F526 : 🔦
+WHILE    : U+1F503 : 🔃
 BREAK    : U+270B  : ✋
 CONTINUE : U+21AA  : ↪️
 GOTO     : U+1F3C3 : 🏃
-RETURN   : U+2934  : ⤴️
-STRUCT   : U+1F3E2 : 🏢
-TRUE     : U+1F44D : 👍
-FALSE    : U+1F44E : 👎
-TRY      : U+26A0  : ⚠️
-CATCH    : U+26D4  : ⛔️
-FINALLY  : U+1F3C1 : 🏁

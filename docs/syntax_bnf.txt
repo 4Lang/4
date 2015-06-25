@@ -1,131 +1,93 @@
-Readability notes:
-[\t]: [INDENT]
-[ ] : [WHITESPACE]
-
 source
-	: statement_or_definiton
-	: statement_or_definiton source
-
-statement_or_definiton
 	: statement
-	: definition
-
+	: source statement
 statement
-    : compound_statement
-	: label_statement
 	: expression
-	: selection_statement
-	: iteration_statement
-	: jump_statement
-	: statement_list
-
+	: IDENTIFIER COLON
+	: GOTO IDENTIFIER
+	: IF     expression compound_statement
+	: ELSEIF expression compound_statement
+	: ELSE              compound_statement
+	: WHILE  expression compound_statement
+	: CONTINUE
+	: BREAK
 compound_statement
 	: INDENT statement
 	: compound_statement INDENT statement
-
-label_statement
-	: [\t][IDENTIFIER][\t]statement
-	: [\t][CASE]expression[\t]statement
-	: [\t][DEFAULT][\t]statement
-
-statement_list
-	: [\t]statement
-	: [\t]statement_list
-
-selection_statement
-	: [IF]expression[\t]statement
-	: [IF]expression[\t]statement[ELSE]statement
-	: [SWITCH]expression[\t]statement
-
-iteration_statement
-	:[LOOP]expression[\t]statement
-	:[LOOP]expression[ ]expression[\t]statement
-	:[LOOP]expression[ ]expression[ ]expression[\t]statement
-	:[LOOP]expression[COLON]expression[\t]statement
-	:statement[\t][LOOP]expression
-	:statement[\t][LOOP]expression[ ]expression
-	:statement[\t][LOOP]expression[COLON]expression
-
-jump_statement
-	:[GOTO][IDENTIFIER]
-	:[CONTINUE]
-	:[BREAK]
-	:[RETURN]expression
-	:[RETURN]
-
 expression
-        : logical_or_expression
-        : unary_expression EQUALS       expression
-        : unary_expression MUL_ASSIGN   expression
-        : unary_expression DIV_ASSIGN   expression
-        : unary_expression MOD_ASSIGN   expression
-        : unary_expression ADD_ASSIGN   expression
-        : unary_expression MIN_ASSIGN   expression
-        : unary_expression LEFT_ASSIGN  expression
-        : unary_expression RIGHT_ASSIGN expression
-        : unary_expression AND_ASSIGN   expression
-        : unary_expression XOR_ASSIGN   expression
-        : unary_expression OR_ASSIGN    expression
+	: logical_or_expression
+	: unary_expression EQUALS       expression
+	: unary_expression MUL_ASSIGN   expression
+	: unary_expression DIV_ASSIGN   expression
+	: unary_expression MOD_ASSIGN   expression
+	: unary_expression ADD_ASSIGN   expression
+	: unary_expression MIN_ASSIGN   expression
+	: unary_expression LEFT_ASSIGN  expression
+	: unary_expression RIGHT_ASSIGN expression
+	: unary_expression AND_ASSIGN   expression
+	: unary_expression XOR_ASSIGN   expression
+	: unary_expression OR_ASSIGN    expression
 logical_or_expression
-        : logical_and_expression
-        : logical_or_expression OR_OP logical_and_expression
+	: logical_and_expression
+	: logical_or_expression OR_OP logical_and_expression
 logical_and_expression
-        : inclusive_or_expression
-        : logical_and_expression AND_OP inclusive_or_expression
+	: inclusive_or_expression
+	: logical_and_expression AND_OP inclusive_or_expression
 inclusive_or_expression
-        : exclusive_or_expression
-        : inclusive_or_expression OR exclusive_or_expression
+	: exclusive_or_expression
+	: inclusive_or_expression OR exclusive_or_expression
 exclusive_or_expression
-        : and_expression
-        : exclusive_or_expression XOR and_expression
+	: and_expression
+	: exclusive_or_expression XOR and_expression
 and_expression
-        : equality_expression
-        : and_expression AND equality_expression
+	: equality_expression
+	: and_expression AND equality_expression
 equality_expression
-        : relational_expression
-        : equality_expression  EQ_OP relational_expression
-        : equality_expression NEQ_OP relational_expression
+	: relational_expression
+	: equality_expression  EQ_OP relational_expression
+	: equality_expression NEQ_OP relational_expression
 relational_expression
-        : shift_expression
-        : relational_expression LEFT  shift_expression
-        : relational_expression RIGHT shift_expression
-        : relational_expression LE_OP shift_expression
-        : relational_expression GE_OP shift_expression
+	: shift_expression
+	: relational_expression LEFT  shift_expression
+	: relational_expression RIGHT shift_expression
+	: relational_expression LE_OP shift_expression
+	: relational_expression GE_OP shift_expression
 shift_expression
-        : additive_expression
-        : shift_expression LEFT_OP  additive_expression
-        : shift_expression RIGHT_OP additive_expression
+	: additive_expression
+	: shift_expression LEFT_OP  additive_expression
+	: shift_expression RIGHT_OP additive_expression
 additive_expression
-        : multiplicative_expression
-        : additive_expression ADD multiplicative_expression
-        : additive_expression SUB multiplicative_expression
+	: multiplicative_expression
+	: additive_expression ADD multiplicative_expression
+	: additive_expression SUB multiplicative_expression
 multiplicative_expression
-        : unary_expression
-        : multiplicative_expression MUL unary_expression
-        : multiplicative_expression DIV unary_expression
-        : multiplicative_expression MOD unary_expression
+	: unary_expression
+	: multiplicative_expression MUL unary_expression
+	: multiplicative_expression DIV unary_expression
+	: multiplicative_expression MOD unary_expression
 unary_expression
-        : postfix_expression
-        : INC_OP unary_expression
-        : DEC_OP unary_expression
-        : ADD    unary_expression
-        : SUB    unary_expression
-        : TILDE  unary_expression
-        : NOT    unary_expression
+	: postfix_expression
+	: INC_OP unary_expression
+	: DEC_OP unary_expression
+	: ADD    unary_expression
+	: SUB    unary_expression
+	: TILDE  unary_expression
+	: NOT    unary_expression
 postfix_expression
-        : primary_expression
-        : postfix_expression INC_OP
-        : postfix_expression DEC_OP
-        : postfix_expression DOT IDENTIFIER
-        : postfix_expression LBRACKET expression RBRACKET
+	: primary_expression
+	: postfix_expression INC_OP
+	: postfix_expression DEC_OP
+	: postfix_expression DOT IDENTIFIER
+	: postfix_expression LBRACKET expression RBRACKET
 primary_expression
-        : IDENTIFIER
-        : IDENTIFIER LPARENT argument_list RPARENT
-        : IDENTIFIER LPARENT RPARENT
-        : INT_LITERAL
-        : FLT_LITERAL
-        : STR_LITERAL
-        : LPARENT expression RPARENT
+	: IDENTIFIER
+	: IDENTIFIER LPARENT argument_list RPARENT
+	: IDENTIFIER LPARENT RPARENT
+	: INT_LITERAL
+	: FLT_LITERAL
+	: STR_LITERAL
+	: BLN_LITERAL
+	: LPARENT expression RPARENT
 argument_list
-        : expression
-        : argument_list COMMA expression
+	: expression
+	: argument_list COMMA expression
