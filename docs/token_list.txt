@@ -6,33 +6,32 @@ ANY_EMOJI = any unicode character listed in
         Regex
 
 INDENT         : ^\s*
-WHITESPACE     : \s+
 COMMENT        : {U+1F4AD - 💭}.*\n
 COMMENT        : {U+1F532 - 🔲}(.|\n)*{U+1F533 - 🔳}
 INT_LITERAL    : [1-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?([0-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?)*
 FLT_LITERAL    : ([0-9]{U+20E3}?)+{U+1F4A7}([0-9]{U+20E3}?)+
-STR_LITERAL    : {U+1F4AC}[^\n{U+1F4AC}]*{U+1F4AC}
+STR_LITERAL    : {U+1F4AC - 💬}[^\n{U+1F4AC - 💬}]*{U+1F4AC - 💬}
 IDENTIFIER     : ({ANY_EMOJI}|[a-zA-Z_])({ANY_EMOJI}|[a-zA-Z_0-9])*
 
         Operators
 
-EQUALS       : =   : U+2B05                : ⬅️
-DOT          : .   : U+1F4A7               : 💧
-RIGHT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪️⬅️
-LEFT_ASSIGN  : <<= : U+23E9,U+2B05         : ⏩⬅️
-AND_ASSIGN   : &=  : U+2764,U+2B05         : ❤️⬅️
-OR_ASSIGN    : |=  : U+1F494,U+2B05        : 💔⬅️
-XOR_ASSIGN   : ^=  : U+1F53C,U+20E3        : 🔼⬅️
-SUB_ASSIGN   : -=  : U+2796,U+2B05         : ➖⬅️
-ADD_ASSIGN   : +=  : U+2795,U+2B05         : ➕⬅️
-MUL_ASSIGN   : *=  : U+2716,U+2B05         : ✖️⬅️
-DIV_ASSIGN   : /=  : U+2797,U+2B05         : ➗⬅️
-MOD_ASSIGN   : %=  : U+0023,U+20E3,U+2B05  : #️⃣⬅️
+EQUALS        : =   : U+2B05                : ⬅️
+DOT           : .   : U+1F4A7               : 💧
+RSHIFT_ASSIGN : >>= : U+23EA,U+2B05         : ⏪️⬅️
+LSHIFT_ASSIGN : <<= : U+23E9,U+2B05         : ⏩⬅️
+AND_ASSIGN    : &=  : U+2764,U+2B05         : ❤️⬅️
+OR_ASSIGN     : |=  : U+1F494,U+2B05        : 💔⬅️
+XOR_ASSIGN    : ^=  : U+1F53C,U+20E3        : 🔼⬅️
+SUB_ASSIGN    : -=  : U+2796,U+2B05         : ➖⬅️
+ADD_ASSIGN    : +=  : U+2795,U+2B05         : ➕⬅️
+MUL_ASSIGN    : *=  : U+2716,U+2B05         : ✖️⬅️
+DIV_ASSIGN    : /=  : U+2797,U+2B05         : ➗⬅️
+MOD_ASSIGN    : %=  : U+0023,U+20E3,U+2B05  : #️⃣⬅️
 
 LE_OP        : <=  : U+2B05,U+2B05         : ◀️↔️
 GE_OP        : >=  : U+27A1,U+2B05         : ▶️↔️
-RIGHT_OP     : >>  : U+23EA                : ⏪
-LEFT_OP      : <<  : U+23E9                : ⏩
+R_OP         : >>  : U+23EA                : ⏪
+L_OP         : <<  : U+23E9                : ⏩
 INC_OP       : ++  : U+23EB                : ⏫
 DEC_OP       : --  : U+23EC                : ⏬
 AND_OP       : &&  : U+2764,U+2764         : ❤️❤️
@@ -63,7 +62,6 @@ RBRACKET     : U+1F448      : 👈
 
         Keywords
 
-VAR      : U+1F340 : 🍀
 IF       : U+2753  : ❓
 ELSE     : U+2757  : ❗️
 ELSEIF   : U+2049  : ⁉️

@@ -17,17 +17,17 @@ compound_statement
 	: compound_statement INDENT statement
 expression
 	: logical_or_expression
-	: unary_expression EQUALS       expression
-	: unary_expression MUL_ASSIGN   expression
-	: unary_expression DIV_ASSIGN   expression
-	: unary_expression MOD_ASSIGN   expression
-	: unary_expression ADD_ASSIGN   expression
-	: unary_expression MIN_ASSIGN   expression
-	: unary_expression LEFT_ASSIGN  expression
-	: unary_expression RIGHT_ASSIGN expression
-	: unary_expression AND_ASSIGN   expression
-	: unary_expression XOR_ASSIGN   expression
-	: unary_expression OR_ASSIGN    expression
+	: unary_expression EQUALS        expression
+	: unary_expression MUL_ASSIGN    expression
+	: unary_expression DIV_ASSIGN    expression
+	: unary_expression MOD_ASSIGN    expression
+	: unary_expression ADD_ASSIGN    expression
+	: unary_expression MIN_ASSIGN    expression
+	: unary_expression LSHIFT_ASSIGN expression
+	: unary_expression RSHIFT_ASSIGN expression
+	: unary_expression AND_ASSIGN    expression
+	: unary_expression XOR_ASSIGN    expression
+	: unary_expression OR_ASSIGN     expression
 logical_or_expression
 	: logical_and_expression
 	: logical_or_expression OR_OP logical_and_expression
@@ -49,14 +49,14 @@ equality_expression
 	: equality_expression NEQ_OP relational_expression
 relational_expression
 	: shift_expression
-	: relational_expression LT shift_expression
-	: relational_expression GT shift_expression
+	: relational_expression LT    shift_expression
+	: relational_expression GT    shift_expression
 	: relational_expression LE_OP shift_expression
 	: relational_expression GE_OP shift_expression
 shift_expression
 	: additive_expression
-	: shift_expression LEFT_OP  additive_expression
-	: shift_expression RIGHT_OP additive_expression
+	: shift_expression L_OP additive_expression
+	: shift_expression R_OP additive_expression
 additive_expression
 	: multiplicative_expression
 	: additive_expression ADD multiplicative_expression
