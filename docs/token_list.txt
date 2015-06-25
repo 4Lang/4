@@ -11,7 +11,6 @@ COMMENT        : {U+1F532 - 🔲}(.|\n)*{U+1F533 - 🔳}
 INT_LITERAL    : [1-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?([0-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?)*
 FLT_LITERAL    : ([0-9]{U+20E3}?)+{U+1F4A7}([0-9]{U+20E3}?)+
 STR_LITERAL    : {U+1F4AC - 💬}[^\n{U+1F4AC - 💬}]*{U+1F4AC - 💬}
-VOID_LITERAL   : {U+2B55 - ⭕️}
 IDENTIFIER     : ({ANY_EMOJI}|[a-zA-Z_])({ANY_EMOJI}|[a-zA-Z_0-9])*
 
         Operators
@@ -77,3 +76,4 @@ CONTINUE : U+21AA  : ↪️
 GOTO     : U+1F3C3 : 🏃
 TRUE     : U+1F44D : 👍
 FALSE    : U+1F44E : 👎
+VOID     : U+2B55  : ⭕️
