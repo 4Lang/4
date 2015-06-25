@@ -43,3 +43,5 @@ PACKAGE-PRIVATE  : U+1F313         : 🌓🌗
 PROTECTED        : U+1F314,U+1F316 : 🌔🌖
 PUBLIC           : U+1F315         : 🌕
 
+CLASS            : U+1F3EB         : 🏫
+
