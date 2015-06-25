@@ -12,7 +12,6 @@ COMMENT        : {U+1F532 - 🔲}(.|\n)*{U+1F533 - 🔳}
 INT_LITERAL    : [1-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?([0-9{U+1F4AF - 💯}{U+1F51F - 🔟}]{U+20E3}?)*
 FLT_LITERAL    : ([0-9]{U+20E3}?)+{U+1F4A7}([0-9]{U+20E3}?)+
 STR_LITERAL    : {U+1F4AC}[^\n{U+1F4AC}]*{U+1F4AC}
-BLN_LITERAL    : (U+1F44D - 👍),(U+1F44E : 👎)
 IDENTIFIER     : ({ANY_EMOJI}|[a-zA-Z_])({ANY_EMOJI}|[a-zA-Z_0-9])*
 
         Operators
@@ -51,8 +50,8 @@ MUL          : *   : U+2716                : ✖️
 DIV          : /   : U+2797                : ➗
 MOD          : %   : U+0023,U+20E3         : #️⃣
 XOR          : ^   : U+1F53C               : 🔼
-LEFT         : <   : U+25C0                : ◀️
-RIGHT        : >   : U+25B6                : ▶️
+LT           : <   : U+25C0                : ◀️
+GT           : >   : U+25B6                : ▶️
 
         Other
 
@@ -68,7 +67,9 @@ VAR      : U+1F340 : 🍀
 IF       : U+2753  : ❓
 ELSE     : U+2757  : ❗️
 ELSEIF   : U+2049  : ⁉️
-WHILE    : U+1F503 : 🔃
+LOOP     : U+1F503 : 🔃
 BREAK    : U+270B  : ✋
 CONTINUE : U+21AA  : ↪️
 GOTO     : U+1F3C3 : 🏃
+TRUE     : U+1F44D : 👍
+FALSE    : U+1F44E : 👎

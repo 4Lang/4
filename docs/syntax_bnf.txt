@@ -11,6 +11,7 @@ statement
 	: WHILE  expression compound_statement
 	: CONTINUE
 	: BREAK
+	: IDENTIFIER argument_list
 compound_statement
 	: INDENT statement
 	: compound_statement INDENT statement
@@ -48,8 +49,8 @@ equality_expression
 	: equality_expression NEQ_OP relational_expression
 relational_expression
 	: shift_expression
-	: relational_expression LEFT  shift_expression
-	: relational_expression RIGHT shift_expression
+	: relational_expression LT shift_expression
+	: relational_expression GT shift_expression
 	: relational_expression LE_OP shift_expression
 	: relational_expression GE_OP shift_expression
 shift_expression
@@ -86,7 +87,8 @@ primary_expression
 	: INT_LITERAL
 	: FLT_LITERAL
 	: STR_LITERAL
-	: BLN_LITERAL
+	: TRUE
+	: FALSE
 	: LPARENT expression RPARENT
 argument_list
 	: expression

@@ -18,12 +18,15 @@ COLON    : U+27A1  : ➡️
 BOOL   : U+270C                          : ✌️
 CHAR   : U+1F521                         : 🔡
 STRING : U+1F524                         : 🔤
+
 BYTE   : U+1F522                         : 🔢
 SHORT  : U+1F522,U+1F522                 : 🔢🔢
 INT    : U+1F522,U+1F522,U+1F522         : 🔢🔢🔢
 LONG   : U+1F522,U+1F522,U+1F522,U+1F522 : 🔢🔢🔢🔢
+
 FLOAT  : U+1F4B1,U+1F4A7                 : 🔢💧
 DOUBLE : U+1F4B1,U+1F4B1,U+1F4A7         : 🔢🔢💧
+
 ENUM   : U+1F523                         : 🔣
 
 
