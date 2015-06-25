@@ -54,11 +54,12 @@ GT           : >   : U+25B6                : ▶️
 
         Other
 
-COMMA        : \s+
-LPARENT      : U+1F31C      : 🌜
-RPARENT      : U+1F31B      : 🌛
-LBRACKET     : U+1F449      : 👉
-RBRACKET     : U+1F448      : 👈
+COLON    : U+27A1  : ➡️
+COMMA    : \s+
+LPARENT  : U+1F31C      : 🌜
+RPARENT  : U+1F31B      : 🌛
+LBRACKET : U+1F449      : 👉
+RBRACKET : U+1F448      : 👈
 
         Keywords
 

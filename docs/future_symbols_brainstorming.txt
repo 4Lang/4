@@ -12,7 +12,6 @@ CATCH    : U+26D4  : ⛔️
 FINALLY  : U+1F3C1 : 🏁
 
         Other
-COLON    : U+27A1  : ➡️
 
         Types
 	
