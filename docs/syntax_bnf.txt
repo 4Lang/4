@@ -85,7 +85,8 @@ postfix_expression
 	: postfix_expression DOT IDENTIFIER
 	: postfix_expression LBRACKET expression RBRACKET
 	: postfix_expression LBRACKET RBRACKET
-	: postfix_expression EBRACKET
+	: postfix_expression DBRACKET
+	: postfix_expression UBRACKET
 primary_expression
 	: IDENTIFIER
 	: IDENTIFIER LPARENT argument_list RPARENT
