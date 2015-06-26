@@ -10,13 +10,13 @@ public enum Token {
 	BLCK_COMMENT_C (-1, P("/\\*.*?\\*/")),
 	LINE_COMMENT   (-1, P("{U1F4AD}.*")),
 	BLCK_COMMENT   (-1, P("{U1F532}.*?{U1F533}")),
-	
+
 	NEWLINE     (1, "\n"),
 	WHITESPACE  (2, P("[\\t\\f ]+")),
 	IDENTIFIER  (3, P("\\w+")),
 	INT_LITERAL (4, P("[1-9]{U20E3}?([0-9]{U20E3}?)*")),
 	FLT_LITERAL (5, P("[0-9]{U20E3}?(\\.|{U1F4A7})([0-9]{U20E3}?)*")),
-	STR_LITERAL (6, P("{U1F4AC}.*?{U1F4AC}")),
+	STR_LITERAL (6, P("({U1F4AC}.*?{U1F4AC})|('.*?')")),
 	
 	DOT        (7, ".",   U(0x1F4A7)         ),
 	ASSIGN     (7, "=",   U(0x2B05 )         ),
