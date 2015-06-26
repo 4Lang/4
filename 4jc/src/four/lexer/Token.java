@@ -6,10 +6,10 @@ public enum Token {
 	
 	EOF(0),
 	
-	LINE_COMMENT_C (0, P("//.*")),
-	BLCK_COMMENT_C (0, P("/\\*.*?\\*/")),
-	LINE_COMMENT   (0, P("{U1F4AD}.*")),
-	BLCK_COMMENT   (0, P("{U1F532}.*?{U1F533}")),
+	LINE_COMMENT_C (-1, P("//.*")),
+	BLCK_COMMENT_C (-1, P("/\\*.*?\\*/")),
+	LINE_COMMENT   (-1, P("{U1F4AD}.*")),
+	BLCK_COMMENT   (-1, P("{U1F532}.*?{U1F533}")),
 	
 	NEWLINE     (1, "\n"),
 	WHITESPACE  (2, P("[\\t\\f ]+")),
@@ -60,8 +60,8 @@ public enum Token {
 	RPARENT  (7, ")",   U(0x1F31B)),
 	LBRACKET (7, "[",   U(0x1F449)),
 	RBRACKET (7, "]",   U(0x1F448)),
-	UBRACKET (7, "[]",  U(0x1F448)),
-	DBRACKET (7, "[_]", U(0x1F447)),
+	UBRACKET (7, "[+]", U(0x1F448)),
+	DBRACKET (7, "[-]", U(0x1F447)),
 	
 	FUNCTION (7, "function", U(0x1F340)),
 	RETURN   (7, "return",   U(0x2934)),
