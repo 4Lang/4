@@ -35,7 +35,7 @@ template <class CharT> bool isReservedEmoji(CharT c) {
 
 template <class CharT> bool isEmoji(CharT c) {
 
-	static const unordered_set<CharT> emojis = {
+	static const std::unordered_set<CharT> emojis = {
 		0x00A9 , // COPYRIGHT SIGN
 		0x00AE , // REGISTERED SIGN
 		0x203C , // DOUBLE EXCLAMATION MARK
