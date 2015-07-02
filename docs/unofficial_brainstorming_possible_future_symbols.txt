@@ -35,11 +35,13 @@ DOUBLE : U+1F4B1,U+1F4B1,U+1F4A7         : 🔢🔢💧
 
 ENUM   : U+1F523                         : 🔣
 
+        Constants
 
+NULL             : U+1F4A9         : 💩
+        
         OOP
 PRIVATE          : U+1F311         : 🌑
 *RESERVED        : U+1F312,U+1F318 : 🌒🌘
 PACKAGE-PRIVATE  : U+1F313         : 🌓🌗
 PROTECTED        : U+1F314,U+1F316 : 🌔🌖
 PUBLIC           : U+1F315         : 🌕
-
