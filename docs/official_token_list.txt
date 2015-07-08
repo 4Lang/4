@@ -30,14 +30,14 @@ MOD_ASSIGN    : %=  : U+0023, U+20E3, U+2B05 : #⃣⬅
 
 LE_OP        : <=  : U+2B05,U+2B05         : ◀↔
 GE_OP        : >=  : U+27A1,U+2B05         : ▶↔
-RSHIFT_OP    : >>  : U+23EA                : ⏪
-LSHIFT_OP    : <<  : U+23E9                : ⏩
+RSH_OP       : >>  : U+23EA                : ⏪
+LSH_OP       : <<  : U+23E9                : ⏩
 AND_OP       : &&  : U+2764,U+2764         : ❤❤
 OR_OP        : ||  : U+1F494,U+1F494       : 💔💔
 INC_OP       : ++  : U+23EB                : ⏫
 DEC_OP       : --  : U+23EC                : ⏬
 EQ_OP        : ==  : U+2194                : ↔️
-NE_OP        : !=  : U+1F6AB,U+2194        : 🚫↔️
+NEQ_OP       : !=  : U+1F6AB,U+2194        : 🚫↔️
 
 TILDE        : ~   : U+3030                : 〰
 NOT          : !   : U+1F6AB               : 🚫
