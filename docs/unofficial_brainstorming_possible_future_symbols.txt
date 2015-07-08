@@ -16,6 +16,8 @@ NEW      : U+1F195 : 🆕
 
 CLASS    : U+1F3EB : 🏫
 
+		Statements
+
         Types
 	
 VAR    : U+1F340                         : 🍀		
