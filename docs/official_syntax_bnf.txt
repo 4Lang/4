@@ -20,20 +20,20 @@ compound_statement
 	: compound_statement INDENT statement
 expression
 	: logical_or_expression
-	: lvalue_expression EQ_ASSIGN     expression
+	: lvalue_expression ASSIGN        expression
 	: lvalue_expression MUL_ASSIGN    expression
 	: lvalue_expression DIV_ASSIGN    expression
 	: lvalue_expression MOD_ASSIGN    expression
 	: lvalue_expression ADD_ASSIGN    expression
 	: lvalue_expression MIN_ASSIGN    expression
-	: lvalue_expression LSHIFT_ASSIGN expression
-	: lvalue_expression RSHIFT_ASSIGN expression
+	: lvalue_expression LSH_ASSIGN    expression
+	: lvalue_expression RSH_ASSIGN    expression
 	: lvalue_expression AND_ASSIGN    expression
 	: lvalue_expression XOR_ASSIGN    expression
 	: lvalue_expression OR_ASSIGN     expression
 logical_or_expression
 	: logical_and_expression
-	: logical_or_expression ORSHIFT_OP logical_and_expression
+	: logical_or_expression OR_OP logical_and_expression
 logical_and_expression
 	: inclusive_or_expression
 	: logical_and_expression AND_OP inclusive_or_expression
@@ -58,8 +58,8 @@ relational_expression
 	: relational_expression GE_OP shift_expression
 shift_expression
 	: additive_expression
-	: shift_expression LSHIFT_OP additive_expression
-	: shift_expression RSHIFT_OP additive_expression
+	: shift_expression LSH_OP additive_expression
+	: shift_expression RSH_OP additive_expression
 additive_expression
 	: multiplicative_expression
 	: additive_expression ADD multiplicative_expression

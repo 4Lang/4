@@ -1,6 +1,5 @@
 ﻿        Keywords
 
-
 STRUCT   : U+1F3E2 : 🏢
 
 SWITCH   : U+1F6A6 : 🚦
@@ -14,6 +13,10 @@ FINALLY  : U+1F3C1 : 🏁
 NEW      : U+1F195 : 🆕
 
         Other
+
+CLASS    : U+1F3EB : 🏫
+
+		Statements
 
         Types
 	

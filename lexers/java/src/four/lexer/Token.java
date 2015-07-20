@@ -65,7 +65,7 @@ public enum Token {
 	
 	FUNCTION (7, "function", U(0x1F340)),
 	RETURN   (7, "return",   U(0x2934)),
-	IF       (7, "if",       U(0x2934)),
+	IF       (7, "if",       U(0x2753)),
 	ELSE     (7, "else",     U(0x2757)),
 	ELSEIF   (7, "elseif",   U(0x2049)),
 	WHILE    (7, "while",    U(0x1F503)),
