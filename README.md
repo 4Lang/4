@@ -6,7 +6,7 @@
 
 🍀 is for both beginner and expert programmers. 
 
-🍀 makes use of emojis to create a universally understandable syntax.
+🍀  uses emojis to create a universally understandable syntax.
 
 
 Beginner programmer, ready for a first language?
